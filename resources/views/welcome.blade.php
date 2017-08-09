@@ -1,3 +1,5 @@
+@extends('layouts.master')
+
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -123,19 +125,108 @@
 
         {{--</div>--}}
 
-        <h3>Maps Demo</h3>
-        <div id='map'></div>
+        {{--------}}
+
+    <script>
+
+        function downloadUrl(url,callback) {
+            var request = window.ActiveXObject ?
+                new ActiveXObject('Microsoft.XMLHTTP') :
+                new XMLHttpRequest;
+
+            request.onreadystatechange = function() {
+                if (request.readyState == 4) {
+                    request.onreadystatechange = doNothing;
+                    callback(request, request.status);
+                }
+            };
+
+            request.open('GET', url, true);
+            request.send(null);
+        }
+
+        downloadUrl('xml-dump', function(data) {
+            var xml = data.responseXML;
+            var markers = xml.documentElement.getElementsByTagName('marker');
+            Array.prototype.forEach.call(markers, function(markerElem) {
+                var id = markerElem.getAttribute('id');
+                var name = markerElem.getAttribute('name');
+                var address = markerElem.getAttribute('address');
+                var type = markerElem.getAttribute('type');
+                var point = new google.maps.LatLng(
+                    parseFloat(markerElem.getAttribute('lat')),
+                    parseFloat(markerElem.getAttribute('lng')));
+
+                var infowincontent = document.createElement('div');
+                var strong = document.createElement('strong');
+                strong.textContent = name
+                infowincontent.appendChild(strong);
+                infowincontent.appendChild(document.createElement('br'));
+
+                var text = document.createElement('text');
+                text.textContent = address
+                infowincontent.appendChild(text);
+                var icon = customLabel[type] || {};
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: point,
+                    label: icon.label
+                });
+            });
+        });
+
+    </script>
+
+
+
+        <div class="jumbotron" style="text-align: center; background-color: #f9ea43" >
+
+            <h1>Ducks Locations</h1>
+
+            <br>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Book a Duck now!</a></p>
+
+        </div>
+        <div class="container" id='map'></div>
         <script>
             function initMap() {
-                var uluru = {lat: -25.363, lng: 131.044};
+
+                var melbourne = {lat: -37.8136, lng: 144.9631};
                 var map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 13,
-                    center: uluru
+                    center: melbourne
                 });
                 var marker = new google.maps.Marker({
-                    position: uluru,
+                    position: melbourne,
                     map: map
                 });
+
+                var melbournecentral = {lat: -37.810821, lng: 144.963123};
+                var marker = new google.maps.Marker({
+                    position: melbournecentral,
+                    map: map
+                });
+
+                var unimelb = {lat: -37.796371, lng: 144.961186};
+                var marker = new google.maps.Marker({
+                    position: unimelb,
+                    map: map
+                });
+
+                var bourkestreetmall = {lat: -37.813536, lng: 144.964377};
+                var marker = new google.maps.Marker({
+                    position: bourkestreetmall,
+                    map: map
+                });
+
+                var townhall = {lat: -37.814948, lng: 144.966905};
+                var marker = new google.maps.Marker({
+                    position: townhall,
+                    map: map
+                });
+
+
+
             }
         </script>
 
@@ -143,6 +234,8 @@
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfo7clIjcqC3ptT6-t3SdRFZd-j99wCWo&libraries=places&callback=initMap">
         </script>
+
+
 
     </body>
 </html>
