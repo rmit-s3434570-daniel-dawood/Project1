@@ -17,3 +17,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@contact')->name('contact');
 Route::get('/home', 'HomeController@vehicle')->name('vehicle');
 Route::get('/home', 'HomeController@about')->name('about');
+Route::get('thankyou', function () {
+ return view('booking.thankyou');
+})->name('thankyou');
+Route::resource('car', 'CarController');
+Route::resource('booking', 'BookingController'); 
