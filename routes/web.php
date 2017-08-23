@@ -13,12 +13,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/home', 'HomeController@contact')->name('contact');
-Route::get('/home', 'HomeController@vehicle')->name('vehicle');
-Route::get('/home', 'HomeController@about')->name('about');
+
+Route::get('contact', function () {
+    return view('contact');
+})->name('contact');
+
+Route::get('vehicles', function () {
+    return view('vehicles');
+})->name('vehicles');
+
+Route::get('about', function () {
+    return view('about');
+})->name('about');
+
 Route::get('thankyou', function () {
  return view('booking.thankyou');
 })->name('thankyou');
+
+Route::get('create', function () {
+ return view('booking.create');
+})->name('booking');
+
+
 Route::resource('car', 'CarController');
 Route::resource('booking', 'BookingController'); 

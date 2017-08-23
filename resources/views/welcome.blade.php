@@ -204,20 +204,16 @@
 
 
         <div class="jumbotron" style="text-align: center; background-color: #f9ea43" >
-
-            <h1>Ducks Locations</h1>
-
-            <br>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Book a Duck now!</a></p>
-
+            <h1>Ducky</h1>
         </div>
         
         <div>
             <ul>
-              <li><a href="">Home</a></li>
-              <li><a href="">Vehicles</a></li>
-              <li><a href="">Contact</a></li>
-              <li><a href="">About</a></li>
+              <li><a href="url('/welcome')">Home</a></li>
+              <li><a href="{{ url('/vehicles') }}">Vehicles</a></li>
+              <li><a href="">Locations</a></li>
+              <li><a href="{{ url('/contact') }}">Contact</a></li>
+              <li><a href="{{ url('/about') }}">About</a></li>
             </ul>
         </div>
         
