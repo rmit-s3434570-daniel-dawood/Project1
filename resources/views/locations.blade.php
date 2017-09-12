@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Ducky</title>
+        <title>Ducky Locations</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -108,7 +108,7 @@
             li a:hover {
                 background-color: #111;
             }
-
+        
         </style>
     </head>
 
@@ -117,7 +117,7 @@
         @if (Route::has('login'))
             <div class="links" style="text-align:right">
                 @if (Auth::check())
-                    <a href="/home">Home</a>
+                    <a href="'/home">Home</a>
                 @else
                     <a href="/login">Login</a>
                     <a href="/register">Register</a>
@@ -201,9 +201,13 @@
     </script>
 
 
-
         <div class="jumbotron" style="text-align: center; background-color: #f9ea43" >
-            <h1>Ducky</h1>
+
+            <h1>Ducks Locations</h1>
+
+            <br>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Book a Duck now!</a></p>
+
         </div>
         
         <div>

@@ -92,16 +92,15 @@
         </style>
     </head>
 
-{{--@extends('layouts/app')--}}
 
     <div>
         @if (Route::has('login'))
             <div class="links" style="text-align:right">
                 @if (Auth::check())
-                    <a href="{{ url('/home') }}">Home</a>
+                    <a href="'/home">Home</a>
                 @else
-                    <a href="{{ url('/login') }}">Login</a>
-                    <a href="{{ url('/register') }}">Register</a>
+                    <a href="/login">Login</a>
+                    <a href="/register">Register</a>
                 @endif
             </div>
         @endif
@@ -116,11 +115,11 @@
         
         <div>
             <ul>
-              <li><a href="">Home</a></li>
-              <li><a href="">Vehicles</a></li>
-              <li><a href="">Locations</a></li>
-              <li><a href="">Contact</a></li>
-              <li><a href="">About</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/vehicles">Vehicles</a></li>
+              <li><a href="/locations">Locations</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/about">About</a></li>
             </ul>
         </div>
         
@@ -128,7 +127,7 @@
         <div class = "Vehicle-container" >
         	<div class="Car-1" style="width:80%; height: 110px; align: center;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left">
-			        <h2> Car 1 </h2>
+			        <h2> Hyundai i30 Wagon</h2>
 			        <p>add image</p>
 			    </div>
 		    	<div class="col-xs-6 col-md-4" style="float:right">
@@ -138,13 +137,13 @@
                        Availability
                       </div>
                     </div>
-		    	    <p><a class="btn btn-primary btn-lg" href="{{ url('/booking/create') }}" role="button">Book now!</a></p>
+		    	    <p><a class="btn btn-primary btn-lg" href="/booking/create" role="button">Book now!</a></p>
 		    	</div>
 			</div>
 			<br>
 			<div class="Car-2" style="width:80%; height: 110px; align: center;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
-			        <h2> Car 2 </h2>
+			        <h2> Kia Sportage </h2>
 			        <p>add image</p>
 			    </div>
 		    	<div class="col-xs-6 col-md-4" style="float:right">
@@ -154,13 +153,13 @@
                        Availability
                       </div>
                     </div>
-		    	    <p><a class="btn btn-primary btn-lg" href="#" role="button">Book now!</a></p>
+		    	    <p><a class="btn btn-primary btn-lg" href="/booking/create" role="button">Book now!</a></p>
 		    	</div>
 			</div>
 			<br>
 			<div class="Car-3" style="width:80%; height: 110px; align: center;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
-			        <h2> Car 3 </h2>
+			        <h2> Toyato Yaris </h2>
 			        <p>add image</p>
 			    </div>
 		    	<div class="col-xs-6 col-md-4" style="float:right">
@@ -170,13 +169,13 @@
                        Availability
                       </div>
                     </div>
-		    	    <p><a class="btn btn-primary btn-lg" href="#" role="button">Book now!</a></p>
+		    	    <p><a class="btn btn-primary btn-lg" href="/booking/create" role="button">Book now!</a></p>
 		    	</div>
 			</div>
 			<br>
 			<div class="Car-4" style="width:80%; height: 110px; align: center;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
-			        <h2> Car 4</h2>
+			        <h2> Audi A1</h2>
 			        <p>add image</p>
 			    </div>
 		    	<div class="col-xs-6 col-md-4" style="float:right">
@@ -186,7 +185,7 @@
                        Availability
                       </div>
                     </div>
-		    	    <p><a class="btn btn-primary btn-lg" href="#" role="button">Book now!</a></p>
+		    	    <p><a class="btn btn-primary btn-lg" href="/booking/create" role="button">Book now!</a></p>
 		    	</div>
 			</div>
 			

@@ -11,7 +11,7 @@
 */
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 Auth::routes();
 
 Route::get('contact', function () {
@@ -33,6 +33,10 @@ Route::get('thankyou', function () {
 Route::get('create', function () {
  return view('booking.create');
 })->name('booking');
+
+Route::get('locations', function () {
+    return view('locations');
+})->name('locations');
 
 
 Route::resource('car', 'CarController');
