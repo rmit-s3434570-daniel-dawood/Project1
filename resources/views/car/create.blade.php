@@ -40,7 +40,7 @@
     {!! Form::text('price', '', ['class' => 'form-control']) !!}
 </div>
 
-<button class="btn btn-success" type="submit">Add Car!</button>
+<button class="btn btn-success submit" type="submit">Add Car!</button>
 
 {!! Form::close() !!}
 @endsection
