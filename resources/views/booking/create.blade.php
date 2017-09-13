@@ -70,7 +70,7 @@
 </div>
 
 
-<button class="btn btn-success" type="submit">Book Now!</button>
+<button class="btn btn-success submit" type="submit">Book Now!</button>
 
 {!! Form::close() !!}
 @endsection
