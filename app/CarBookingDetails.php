@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class CarBookingDetails extends Model
 {
-    //
-    protected $fillable = [ 'address_line_1', 'address_line_2', 'suburb',
-        'state', 'country' ];
+    protected $dates = [ 'start_date', 'end_date' ];
+    protected $fillable = [ 'mobile', 'address_line_1', 'address_line_2', ];
 }
