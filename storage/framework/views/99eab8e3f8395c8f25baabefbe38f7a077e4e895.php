@@ -1,7 +1,7 @@
-@extends('layouts.master')
+
 
 <!doctype html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="<?php echo e(app()->getLocale()); ?>">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -94,16 +94,16 @@
 
 
     <div>
-        @if (Route::has('login'))
+        <?php if(Route::has('login')): ?>
             <div class="links" style="text-align:right">
-                @if (Auth::check())
+                <?php if(Auth::check()): ?>
                     <a href="'/home">Home</a>
-                @else
+                <?php else: ?>
                     <a href="/login">Login</a>
                     <a href="/register">Register</a>
-                @endif
+                <?php endif; ?>
             </div>
-        @endif
+        <?php endif; ?>
     </div>
 
     <body>
@@ -189,38 +189,14 @@
 		    	</div>
 			</div>
 			<br><br><br>
-			<div class="Car-5" style="width:80%; height: 200px; align: center; border-style:groove;">
-			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
-			        <h2> Coming Soon</h2>
-			        <p>add image</p>
-			    </div>
-		    	<div class="col-xs-6 col-md-4" style="float:right">
-		    	    <h3>Pricing - $? p/day</h3>
-		    	    <div class="panel panel-default">
-                      <div class="panel-body">
-                       Availability
-                      </div>
-                    </div>
-		    	    <p><a class="btn btn-primary btn-lg" href="/booking/create" role="button">Book now!</a></p>
-		    	</div>
-			</div>
-			<br><br><br>			
-			<div class="Car-6" style="width:80%; height: 200px; align: center; border-style:groove;">
-			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
-			        <h2> Coming Soon</h2>
-			        <p>add image</p>
-			    </div>
-		    	<div class="col-xs-6 col-md-4" style="float:right">
-		    	    <h3>Pricing - $? p/day</h3>
-		    	    <div class="panel panel-default">
-                      <div class="panel-body">
-                       Availability
-                      </div>
-                    </div>
-		    	    <p><a class="btn btn-primary btn-lg" href="/booking/create" role="button">Book now!</a></p>
-		    	</div>
-			</div>			
-			<br><br><br>			
+			
+			
+			
+			
+			
+			
+			
+			
         </div>
         
         
@@ -236,3 +212,5 @@
         
     </body>
 </html>
+
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

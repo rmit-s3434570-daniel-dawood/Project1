@@ -1,7 +1,5 @@
-@extends('layouts.master')
-
 <!doctype html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="<?php echo e(app()->getLocale()); ?>">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -108,26 +106,51 @@
             li a:hover {
                 background-color: #111;
             }
-        
+            
+            .front-content-info {
+                list-style-type: none;
+                overflow: hidden;
+                background-color: #FFDB58;
+            }
+            
+            .front-content-text {
+                display: block;
+                color: Black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            
+            .divider {
+                padding-bottom: 5mm;
+            }
+            
+            .col-sm-3 {
+                display: block, center;
+                height: 250px;
+                background-color: #CD7F32;
+            }
+            
+
         </style>
     </head>
 
 
     <div>
-        @if (Route::has('login'))
+        <?php if(Route::has('login')): ?>
             <div class="links" style="text-align:right">
-                @if (Auth::check())
-                    <a href="'/home">Home</a>
-                @else
+                <?php if(Auth::check()): ?>
+                    <a href="/home">Home</a>
+                <?php else: ?>
                     <a href="/login">Login</a>
                     <a href="/register">Register</a>
-                @endif
+                <?php endif; ?>
             </div>
-        @endif
+        <?php endif; ?>
     </div>
 
     <body>
-
+        
     <script>
 
         function downloadUrl(url,callback) {
@@ -179,8 +202,9 @@
     </script>
 
 
+
         <div class="jumbotron" style="text-align: center; background-color: #f9ea43" >
-            <h1>Ducks Locations</h1>
+            <h1>Ducky</h1>
         </div>
         
         <div>
@@ -202,44 +226,56 @@
                     zoom: 13,
                     center: melbourne
                 });
-                var marker = new google.maps.Marker({
-                    position: melbourne,
-                    map: map
+               
+
+                var mapLabel = new MapLabel({
+                    text: 'Test',
+                    position: new google.maps.LatLng(50,50),
+                    map: melbourne,
+                    fontSize: 20,
+                    align: 'top'
                 });
 
-                var melbournecentral = {lat: -37.810821, lng: 144.963123};
-                var marker = new google.maps.Marker({
-                    position: melbournecentral,
-                    map: map
-                });
 
-                var unimelb = {lat: -37.796371, lng: 144.961186};
-                var marker = new google.maps.Marker({
-                    position: unimelb,
-                    map: map
-                });
 
-                var bourkestreetmall = {lat: -37.813536, lng: 144.964377};
-                var marker = new google.maps.Marker({
-                    position: bourkestreetmall,
-                    map: map
-                });
-
-                var townhall = {lat: -37.814948, lng: 144.966905};
-                var marker = new google.maps.Marker({
-                    position: townhall,
-                    map: map
-                });
             }
         </script>
-        
+
+
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfo7clIjcqC3ptT6-t3SdRFZd-j99wCWo&libraries=places&callback=initMap">
         </script>
-
-        <div>
-            <h3>How it works.</h3>
+        
+        <div class="front-content-info">
+            <li>
+                
+                <li class="front-content-text"><h3>Drive all around Melbourne</h3></li>
+                <li class="front-content-text"><h3>Multiple Cars</h3></li>
+                <li class="front-content-text"><h3>Multiple Locations</h3></li>
+            </li>
         </div>
-
+        
+        <div class="divider"></div>
+        
+        <div class="front-grid">
+            <div class="col-sm-0.5"></div>
+            <div class="col-sm-3"><h3>Book Vehicles near you, Any hour of the day</h3>
+                <br><button type="button" class="btn btn-primary">
+                    <a href="/booking">Book Now</a></button></div>
+                
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3"><h3>A wide range of Vehicles, Get the right vehicle</h3>
+                <br><button type="button" class="btn btn-primary">
+                    <a href="/vehicles">View Vehicles</a></button></div>
+                
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3"><h3>Fuel, cleaning, rego and servicing all included</h3>
+                <br><button type="button" class="btn btn-primary">
+                    <a href="/vehicles">View Vehicles</a></button></div>
+        </div>
     </body>
+    
+    
 </html>
+
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

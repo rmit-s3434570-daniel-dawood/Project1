@@ -1,7 +1,5 @@
-@extends('layouts.master')
-
 <!doctype html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="<?php echo e(app()->getLocale()); ?>">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -114,16 +112,16 @@
 
 
     <div>
-        @if (Route::has('login'))
+        <?php if(Route::has('login')): ?>
             <div class="links" style="text-align:right">
-                @if (Auth::check())
+                <?php if(Auth::check()): ?>
                     <a href="'/home">Home</a>
-                @else
+                <?php else: ?>
                     <a href="/login">Login</a>
                     <a href="/register">Register</a>
-                @endif
+                <?php endif; ?>
             </div>
-        @endif
+        <?php endif; ?>
     </div>
 
     <body>
@@ -230,16 +228,20 @@
                     position: townhall,
                     map: map
                 });
+
+
+
             }
         </script>
-        
+
+
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfo7clIjcqC3ptT6-t3SdRFZd-j99wCWo&libraries=places&callback=initMap">
         </script>
 
-        <div>
-            <h3>How it works.</h3>
-        </div>
+
 
     </body>
 </html>
+
+<?php echo $__env->make('layouts.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
