@@ -97,7 +97,7 @@
                 float: left;
             }
 
-            li a {
+            .nav{
                 display: block;
                 color: white;
                 text-align: center;
@@ -105,7 +105,7 @@
                 text-decoration: none;
             }
 
-            li a:hover {
+            .nav:hover {
                 background-color: #111;
             }
             
@@ -211,11 +211,11 @@
         
         <div>
             <ul>
-              <li><a href="/welcome">Home</a></li>
-              <li><a href="/vehicles">Vehicles</a></li>
-              <li><a href="/locations">Locations</a></li>
-              <li><a href="/contact">Contact</a></li>
-              <li><a href="/about">About</a></li>
+              <li><a class="nav"  href="/">Home</a></li>
+              <li><a class="nav"  href="/vehicles">Vehicles</a></li>
+              <li><a class="nav"  href="/locations">Locations</a></li>
+              <li><a class="nav"  href="/contact">Contact</a></li>
+              <li><a class="nav" href="/about">About</a></li>
             </ul>
         </div>
         
@@ -229,7 +229,7 @@
                     center: melbourne
                 });
                
-
+                
                 var mapLabel = new MapLabel({
                     text: 'Test',
                     position: new google.maps.LatLng(50,50),
@@ -237,9 +237,6 @@
                     fontSize: 20,
                     align: 'top'
                 });
-
-
-
             }
         </script>
 
@@ -263,7 +260,7 @@
             <div class="col-sm-0.5"></div>
             <div class="col-sm-3"><h3>Book Vehicles near you, Any hour of the day</h3>
                 <br><button type="button" class="btn btn-primary">
-                    <a href="/booking">Book Now</a></button></div>
+                    <a href="/booking/create" >Book Now</a></button></div>
                 
             <div class="col-sm-1"></div>
             <div class="col-sm-3"><h3>A wide range of Vehicles, Get the right vehicle</h3>
@@ -273,9 +270,17 @@
             <div class="col-sm-1"></div>
             <div class="col-sm-3"><h3>Fuel, cleaning, rego and servicing all included</h3>
                 <br><button type="button" class="btn btn-primary">
-                    <a href="/vehicles">View Vehicles</a></button></div>
+                    <a href="auth/register" >Join Now</a></button></div>
         </div>
+        
+        
+        <div>
+            <ul>
+              <li><a href="/faq">FAQs</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms of Use</a></li>
+              <li><a href="/refund">Refund Policy</a></li>
+            </ul> 
+        </div>        
     </body>
-    
-    
 </html>

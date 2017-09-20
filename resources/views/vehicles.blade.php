@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Contact Ducky</title>
+        <title>Ducky Vehicles</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -133,7 +133,7 @@
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $40 p/day</h3>
 		    	    <div class="panel panel-default">
-                      <div class="panel-body">
+                      <div class="panel-body" style="background-color: #00FF00">
                        Availability
                       </div>
                     </div>
@@ -149,7 +149,7 @@
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $30 p/day</h3>
 		    	    <div class="panel panel-default">
-                      <div class="panel-body">
+                      <div class="panel-body" style="background-color: #00FF00">
                        Availability
                       </div>
                     </div>
@@ -165,7 +165,7 @@
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $10 p/day</h3>
 		    	    <div class="panel panel-default">
-                      <div class="panel-body">
+                      <div class="panel-body" style="background-color: #00FF00">
                        Availability
                       </div>
                     </div>
@@ -181,7 +181,7 @@
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $5 p/day</h3>
 		    	    <div class="panel panel-default">
-                      <div class="panel-body">
+                      <div class="panel-body" style="background-color: #00FF00">
                        Availability
                       </div>
                     </div>
@@ -197,7 +197,7 @@
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $? p/day</h3>
 		    	    <div class="panel panel-default">
-                      <div class="panel-body">
+                      <div class="panel-body" style="background-color: #736F6E">
                        Availability
                       </div>
                     </div>
@@ -213,7 +213,7 @@
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $? p/day</h3>
 		    	    <div class="panel panel-default">
-                      <div class="panel-body">
+                      <div class="panel-body" style="background-color: #736F6E">
                        Availability
                       </div>
                     </div>
@@ -230,7 +230,10 @@
         <!-- Footer -->
         <div>
             <ul>
-              <li><a href="">Footer Stuff here</a></li>
+              <li><a href="/faq">FAQs</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms of Use</a></li>
+              <li><a href="/refund">Refund Policy</a></li>
             </ul> 
         </div>
         

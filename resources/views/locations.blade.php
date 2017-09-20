@@ -185,7 +185,7 @@
         
         <div>
             <ul>
-              <li><a href="/welcome">Home</a></li>
+              <li><a href="/">Home</a></li>
               <li><a href="/vehicles">Vehicles</a></li>
               <li><a href="/locations">Locations</a></li>
               <li><a href="/contact">Contact</a></li>
@@ -237,8 +237,23 @@
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfo7clIjcqC3ptT6-t3SdRFZd-j99wCWo&libraries=places&callback=initMap">
         </script>
 
+        <br>
+        
+        <div class="about-container">
+            <div class="panel panel-default">
+                <div class="panel-heading">How to use</div>
+                <div class="panel-body">Info on how to use</div>
+            </div>
+        </div>    
+
+        <!-- Footer -->
         <div>
-            <h3>How it works.</h3>
+            <ul>
+              <li><a href="/faq">FAQs</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms of Use</a></li>
+              <li><a href="/refund">Refund Policy</a></li>
+            </ul> 
         </div>
 
     </body>

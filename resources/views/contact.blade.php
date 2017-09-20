@@ -114,7 +114,7 @@
         
         <div>
             <ul>
-              <li><a href="/welcome">Home</a></li>
+              <li><a href="/">Home</a></li>
               <li><a href="/vehicles">Vehicles</a></li>
               <li><a href="/locations">Locations</a></li>
               <li><a href="/contact">Contact</a></li>
@@ -152,7 +152,10 @@
         <!-- Footer -->
         <div>
             <ul>
-              <li><a href="">Footer Stuff here</a></li>
+              <li><a href="/faq">FAQs</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms of Use</a></li>
+              <li><a href="/refund">Refund Policy</a></li>
             </ul> 
         </div>
         
