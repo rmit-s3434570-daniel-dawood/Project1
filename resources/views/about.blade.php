@@ -92,16 +92,15 @@
         </style>
     </head>
 
-{{--@extends('layouts/app')--}}
 
     <div>
         @if (Route::has('login'))
             <div class="links" style="text-align:right">
                 @if (Auth::check())
-                    <a href="{{ url('/home') }}">Home</a>
+                    <a href="'/home">Home</a>
                 @else
-                    <a href="{{ url('/login') }}">Login</a>
-                    <a href="{{ url('/register') }}">Register</a>
+                    <a href="/login">Login</a>
+                    <a href="/register">Register</a>
                 @endif
             </div>
         @endif
@@ -116,29 +115,38 @@
         
         <div>
             <ul>
-              <li><a href="">Home</a></li>
-              <li><a href="">Vehicles</a></li>
-              <li><a href="">Locations</a></li>
-              <li><a href="">Contact</a></li>
-              <li><a href="">About</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/vehicles">Vehicles</a></li>
+              <li><a href="/locations">Locations</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/about">About</a></li>
             </ul>
         </div>
         
         <!-- About Section -->
         <div class="about-container">
-            <h1>What is Ducky?</h1>
-            <p>Ducky is a application allowing customers to rent a car anywhere and at anytime, etc.</p>
-            <br>
-            <h1>Why use Ducky?</h1>
-            <p> info here</p>
-            <h1>Team behind Ducky</h1>
-            <p>info</p>
+            <div class="panel panel-default">
+                <div class="panel-heading">What is Ducky?</div>
+                <div class="panel-body">Ducky is a application allowing customers to 
+                rent a car anywhere and at anytime, etc.</div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Why use Ducky?</div>
+                <div class="panel-body">Info here</div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Ducky Team</div>
+                <div class="panel-body">sdsd</div>
+            </div>
         </div>
         
         <!-- Footer -->
         <div>
             <ul>
-              <li><a href="">Footer Stuff here</a></li>
+              <li><a href="/faq">FAQs</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms of Use</a></li>
+              <li><a href="/refund">Refund Policy</a></li>
             </ul> 
         </div>
         

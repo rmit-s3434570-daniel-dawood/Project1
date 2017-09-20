@@ -11,7 +11,7 @@
 */
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 Auth::routes();
 
 Route::get('contact', function () {
@@ -34,6 +34,25 @@ Route::get('create', function () {
  return view('booking.create');
 })->name('booking');
 
+Route::get('locations', function () {
+    return view('locations');
+})->name('locations');
+
+Route::get('faq', function () {
+    return view('faq');
+})->name('faq');
+
+Route::get('terms', function () {
+    return view('terms');
+})->name('terms');
+
+Route::get('privacy', function () {
+    return view('privacy');
+})->name('privacy');
+
+Route::get('refund', function () {
+    return view('refund');
+})->name('refund');
 
 Route::resource('car', 'CarController');
 Route::resource('booking', 'BookingController'); 
