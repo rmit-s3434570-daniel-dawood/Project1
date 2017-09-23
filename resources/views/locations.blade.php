@@ -1,9 +1,9 @@
 @extends('layouts.master')
 
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -81,7 +81,7 @@
             }
 
              #map {
-                 height: 400px;
+                 height: 600px;
                  width: 100%;
              }
              
@@ -108,19 +108,19 @@
             li a:hover {
                 background-color: #111;
             }
-        
-        </style>
-    </head>
+    </style>
+  </head>
 
+  {{--@extends('layouts/app')--}}
 
     <div>
         @if (Route::has('login'))
             <div class="links" style="text-align:right">
                 @if (Auth::check())
-                    <a href="'/home">Home</a>
+                    <a href="{{ url('/home') }}">Home</a>
                 @else
-                    <a href="/login">Login</a>
-                    <a href="/register">Register</a>
+                    <a href="{{ url('/login') }}">Login</a>
+                    <a href="{{ url('/register') }}">Register</a>
                 @endif
             </div>
         @endif
@@ -128,59 +128,30 @@
 
     <body>
 
-    <script>
+        {{--<div>--}}
 
-        function downloadUrl(url,callback) {
-            var request = window.ActiveXObject ?
-                new ActiveXObject('Microsoft.XMLHTTP') :
-                new XMLHttpRequest;
+            {{--<div class="content">--}}
+                {{--<div class="title m-b-md">--}}
+                    {{--Ducky--}}
+                {{--</div>--}}
+            {{--</div>--}}
 
-            request.onreadystatechange = function() {
-                if (request.readyState == 4) {
-                    request.onreadystatechange = doNothing;
-                    callback(request, request.status);
-                }
-            };
+            {{--<div class="google-maps">--}}
+                {{--<iframe--}}
+                        {{--width="1000"--}}
+                        {{--height="450"--}}
+                        {{--frameborder="0" style="border:0"--}}
+                        {{--src="https://www.google.com/maps/embed/v1/search?key=AIzaSyAhidHBjZYikpLBhgoPiCP6lKoXyaY7KAY--}}
+        {{--&q=Melbourne&zoom=15" allowfullscreen>--}}
+                {{--</iframe>--}}
+            {{--</div>--}}
 
-            request.open('GET', url, true);
-            request.send(null);
-        }
+        {{--</div>--}}
 
-        downloadUrl('xml-dump', function(data) {
-            var xml = data.responseXML;
-            var markers = xml.documentElement.getElementsByTagName('marker');
-            Array.prototype.forEach.call(markers, function(markerElem) {
-                var id = markerElem.getAttribute('id');
-                var name = markerElem.getAttribute('name');
-                var address = markerElem.getAttribute('address');
-                var type = markerElem.getAttribute('type');
-                var point = new google.maps.LatLng(
-                    parseFloat(markerElem.getAttribute('lat')),
-                    parseFloat(markerElem.getAttribute('lng')));
-
-                var infowincontent = document.createElement('div');
-                var strong = document.createElement('strong');
-                strong.textContent = name
-                infowincontent.appendChild(strong);
-                infowincontent.appendChild(document.createElement('br'));
-
-                var text = document.createElement('text');
-                text.textContent = address
-                infowincontent.appendChild(text);
-                var icon = customLabel[type] || {};
-                var marker = new google.maps.Marker({
-                    map: map,
-                    position: point,
-                    label: icon.label
-                });
-            });
-        });
-
-    </script>
-
+        {{--------}}
 
         <div class="jumbotron" style="text-align: center; background-color: #f9ea43" >
-            <h1>Ducks Locations</h1>
+            <h1>Ducky</h1>
         </div>
         
         <div>
@@ -192,52 +163,124 @@
               <li><a href="/about">About</a></li>
             </ul>
         </div>
-        
+        <input id="pac-input" type="text" placeholder="Search Box"/>
         <div class="container" id='map'></div>
-        <script>
-            function initMap() {
+  <body>
+  
+    <div id="map"></div>
 
-                var melbourne = {lat: -37.8136, lng: 144.9631};
-                var map = new google.maps.Map(document.getElementById('map'), {
+    <script>
+      // Search box 
+
+      function initAutocomplete() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -37.8136, lng: 144.9631},
+          zoom: 13,
+          mapTypeId: 'roadmap'
+        });
+
+        var melbourne = {lat: -37.8136, lng: 144.9631};
+        var map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 13,
                     center: melbourne
                 });
-                var marker = new google.maps.Marker({
+        var marker = new google.maps.Marker({
                     position: melbourne,
                     map: map
                 });
 
-                var melbournecentral = {lat: -37.810821, lng: 144.963123};
-                var marker = new google.maps.Marker({
+        var melbournecentral = {lat: -37.810821, lng: 144.963123};
+        var marker = new google.maps.Marker({
                     position: melbournecentral,
                     map: map
                 });
 
-                var unimelb = {lat: -37.796371, lng: 144.961186};
-                var marker = new google.maps.Marker({
+        var unimelb = {lat: -37.796371, lng: 144.961186};
+        var marker = new google.maps.Marker({
                     position: unimelb,
                     map: map
                 });
 
-                var bourkestreetmall = {lat: -37.813536, lng: 144.964377};
-                var marker = new google.maps.Marker({
+        var bourkestreetmall = {lat: -37.813536, lng: 144.964377};
+        var marker = new google.maps.Marker({
                     position: bourkestreetmall,
                     map: map
                 });
 
-                var townhall = {lat: -37.814948, lng: 144.966905};
-                var marker = new google.maps.Marker({
+        var townhall = {lat: -37.814948, lng: 144.966905};
+        var marker = new google.maps.Marker({
                     position: townhall,
                     map: map
                 });
-            }
-        </script>
         
-        <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfo7clIjcqC3ptT6-t3SdRFZd-j99wCWo&libraries=places&callback=initMap">
-        </script>
+        var input = document.getElementById('pac-input');
+        var searchBox = new google.maps.places.SearchBox(input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-        <br>
+     
+        map.addListener('bounds_changed', function() {
+          searchBox.setBounds(map.getBounds());
+        });
+
+        
+        var markers = [];
+      
+        searchBox.addListener('places_changed', function() {
+          var places = searchBox.getPlaces();
+
+          if (places.length == 0) {
+            return;
+          }
+
+         
+          markers.forEach(function(marker) {
+            marker.setMap(null);
+          });
+          markers = [];
+
+          var bounds = new google.maps.LatLngBounds();
+          places.forEach(function(place) {
+            if (!place.geometry) {
+              console.log("Returned place contains no geometry");
+              return;
+            }
+            var icon = {
+              url: place.icon,
+              size: new google.maps.Size(71, 71),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(17, 34),
+              scaledSize: new google.maps.Size(25, 25)
+            };
+
+            
+            markers.push(new google.maps.Marker({
+              map: map,
+              icon: icon,
+              title: place.name,
+              position: place.geometry.location
+            }));
+
+            if (place.geometry.viewport) {
+              
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+            }
+          });
+          map.fitBounds(bounds);
+        });
+      }
+
+
+
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfo7clIjcqC3ptT6-t3SdRFZd-j99wCWo&libraries=places&callback=initAutocomplete"
+         async defer>
+           
+    </script>
+
+     <br>
         
         <div class="about-container">
             <div class="panel panel-default">
@@ -256,5 +299,5 @@
             </ul> 
         </div>
 
-    </body>
+  </body>
 </html>
