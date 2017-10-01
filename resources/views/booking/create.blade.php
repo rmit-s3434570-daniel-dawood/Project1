@@ -37,10 +37,10 @@
 <div class="form-inline">
     <div class="form-group">
     {!! Form::label('start_date', 'Booking Start Date') !!}
-    {!! Form::input('date', 'start_date', null, ['class' => 'form-control']) !!}
-   <div class="form-group">
+    {!! Form::input('date', 'start_date', null, ['class' => 'form-control'], ['id' => 'start_date']) !!}
+   <div class="form-group" id="end_date">
     {!! Form::label('end_date', 'Booking End Date') !!}
-    {!! Form::input('date', 'end_date', null, ['class' => 'form-control']) !!}
+    {!! Form::input('date', 'end_date', null, ['class' => 'form-control'], ['id' => 'end_date']) !!}
     </div>
     </div>
 </div>

@@ -20,11 +20,11 @@ class BookingTest extends DuskTestCase
                 ->select('item_id')
                 ->type('name', 'TestGuy')
                 ->type('email', 'testguy@gmail.com')
+                ->type('mobile', '0435917263')
+                ->keys('#start_date', '09092017') // omit the dashes
+                ->keys('#end_date', '10102017') // omit the dashes
                 ->type('address_line_1', '123')
                 ->type('address_line_2', 'La Trobe St')
-                ->type('suburb', 'CBD')
-                ->type('state', 'Victoria')
-                ->type('country', 'Australia')
                 ->press('.submit')
                 ->assertSee('Thank You');
         });

@@ -25,7 +25,7 @@ class LinksTesting extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('ducky/public/booking/create')
-                   ->assertSee('Add New Car');
+                   ->assertSee('Book a Ducky');
         });
     }
 }
