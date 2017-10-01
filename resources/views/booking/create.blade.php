@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Book a Ducky</h2>
+            <h2>Add New Car</h2>
         </div>
     </div>
 </div>
@@ -34,6 +34,7 @@
     </select>
 </div>
 
+<<<<<<< HEAD
 <div class="form-inline">
     <div class="form-group">
     {!! Form::label('start_date', 'Booking Start Date') !!}
@@ -45,6 +46,8 @@
     </div>
 </div>
 
+=======
+>>>>>>> ba2834167a551e092a55c0a6fdfe6b4bab2e8148
 <div class="form-group">
     {!! Form::label('name', 'Name') !!}
     {!! Form::text('name', '', ['class' => 'form-control']) !!}
@@ -56,11 +59,6 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('mobile', 'Mobile Number') !!}
-    {!! Form::text('mobile', '', ['class' => 'form-control']) !!}
-</div>
-
-<div class="form-group">
     {!! Form::label('address_line_1', 'Address') !!}
     {!! Form::text('address_line_1', '', ['class' => 'form-control']) !!}
 </div>
@@ -69,8 +67,22 @@
     {!! Form::text('address_line_2', '', ['class' => 'form-control']) !!}
 </div>
 
+<div class="form-group">
+    {!! Form::label('suburb', 'Suburb') !!}
+    {!! Form::text('suburb', '', ['class' => 'form-control']) !!}
+</div>
 
-<button class="btn btn-success submit" type="submit">Book Now!</button>
+<div class="form-group">
+    {!! Form::label('state', 'State') !!}
+    {!! Form::text('state', '', ['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group">
+    {!! Form::label('country', 'Country') !!}
+    {!! Form::text('country', '', ['class' => 'form-control']) !!}
+</div>
+
+<button class="btn btn-success" type="submit">Book Now!</button>
 
 {!! Form::close() !!}
 @endsection
