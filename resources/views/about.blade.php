@@ -70,7 +70,8 @@
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background-color: #333;
+                background-color: #222222;
+                font-weight: 600;
             }
 
             li {
@@ -86,7 +87,13 @@
             }
 
             li a:hover {
-                background-color: #111;
+                background-color: #fec503;
+                font-weight: 400;
+            }
+            
+            @media screen and (max-width: 700px){
+            ul.topnav li.right, 
+            ul.topnav li {float: none;}
             }
         
         </style>
@@ -114,7 +121,7 @@
         </div>
         
         <div>
-            <ul>
+            <ul class="topnav">
               <li><a href="/">Home</a></li>
               <li><a href="/vehicles">Vehicles</a></li>
               <li><a href="/locations">Locations</a></li>
@@ -142,7 +149,7 @@
         
         <!-- Footer -->
         <div>
-            <ul>
+            <ul class="topnav">
               <li><a href="/faq">FAQs</a></li>
               <li><a href="/privacy">Privacy Policy</a></li>
               <li><a href="/terms">Terms of Use</a></li>
