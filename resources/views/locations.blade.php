@@ -284,8 +284,8 @@
         
         <div class="about-container">
             <div class="panel panel-default">
-                <div class="panel-heading">How to use</div>
-                <div class="panel-body">Info on how to use</div>
+                <div class="panel-heading">How to Use the locations map</div>
+                <div class="panel-body">Here are all the current locations of our Ducky Cars.</div>
             </div>
         </div>    
 

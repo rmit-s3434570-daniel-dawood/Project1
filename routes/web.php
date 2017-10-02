@@ -55,4 +55,5 @@ Route::get('refund', function () {
 })->name('refund');
 
 Route::resource('car', 'CarController');
+
 Route::resource('booking', 'BookingController'); 

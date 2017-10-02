@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@section('title', 'Contact Ducky')
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>

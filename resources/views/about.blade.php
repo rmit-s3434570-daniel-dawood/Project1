@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Contact Ducky</title>
+        <title>About Ducky</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -128,15 +128,15 @@
             <div class="panel panel-default">
                 <div class="panel-heading">What is Ducky?</div>
                 <div class="panel-body">Ducky is a application allowing customers to 
-                rent a car anywhere and at anytime, etc.</div>
+                rent a car in the Melbourne CBD area at anytime. Simply book a car, pick it up from our large set of locations and return it when you're done. It's that easy.</div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">Why use Ducky?</div>
-                <div class="panel-body">Info here</div>
+                <div class="panel-body">Ducky allows you to choose from a wide range of cars.</div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">Ducky Team</div>
-                <div class="panel-body">sdsd</div>
+                <div class="panel-body">Edison, Shaun, Daniel and Kelvin</div>
             </div>
         </div>
         

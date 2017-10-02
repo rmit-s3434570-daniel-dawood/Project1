@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Add New Car')
+@section('title', 'Booking Successful')
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -11,10 +11,10 @@
     @if(!empty(Session::get('name')))
         <p>Thanks {!! Session::get('name') !!},</p>
         <b>Below are the details</b>
+        <p>Start Date: {!! Session::get('bookingDetails')->start_date !!}</p>
+        <p>End Date: {!! Session::get('bookingDetails')->end_date !!}</p>
         <p>Address: {!! Session::get('bookingDetails')->address_line_1 !!}
             {!! Session::get('bookingDetails')->address_line_2 !!}</p>
-        <p>Suburb: {!! Session::get('bookingDetails')->suburb !!}</p>
-        <p>State: {!! Session::get('bookingDetails')->state !!}</p>
-        <p>Country: {!! Session::get('bookingDetails')->country !!}</p>
+
     @endif
 @endsection

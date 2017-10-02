@@ -128,7 +128,7 @@
         	<div class="Car-1" style="width:80%; height: 200px; align: center; border-style:groove;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left">
 			        <h2> Hyundai i30 Wagon</h2>
-			        <p>add image</p>
+			        <p><img src="images/hyundai i30 wagon.jpg" alt="Hyundai i30 Wagon" height="125" width="300"></p>
 			    </div>
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $40 p/day</h3>
@@ -144,7 +144,7 @@
 			<div class="Car-2" style="width:80%; height: 200px; align: center; border-style:groove;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
 			        <h2> Kia Sportage </h2>
-			        <p>add image</p>
+			        <p><img src="images/Kia Sportage.png" alt="Kia Sportage" height="125" width="300"></p>
 			    </div>
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $30 p/day</h3>
@@ -160,7 +160,7 @@
 			<div class="Car-3" style="width:80%; height: 200px; align: center; border-style:groove;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
 			        <h2> Toyato Yaris </h2>
-			        <p>add image</p>
+			        <p><img src="images/Toyota Yaris.png" alt="Toyota Yaris" height="125" width="300"></p>
 			    </div>
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $10 p/day</h3>
@@ -176,7 +176,7 @@
 			<div class="Car-4" style="width:80%; height: 200px; align: center; border-style:groove;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
 			        <h2> Audi A1</h2>
-			        <p>add image</p>
+			        <p><img src="images/Audi A1.jpg" alt="Audi A1" height="125" width="300"></p>
 			    </div>
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $5 p/day</h3>
