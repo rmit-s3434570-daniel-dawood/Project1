@@ -21,7 +21,7 @@ class CreateCarBookingsTable extends Migration
              */
             $table->string('name');
             $table->string('email');
-            $table->string('status');
+            $table->string('status')->default('booked');
             $table->timestamps();
         });
     }

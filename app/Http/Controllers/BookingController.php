@@ -12,7 +12,7 @@ class BookingController extends Controller
     //
 
     public function index() {
-        $car_booking = CarBooking::all();
+        $car_booking = CarBooking::where('status', '=', 'booked')->get();
         return view('booking.index', ['car_booking' => $car_booking ]);
     }
 
@@ -26,6 +26,11 @@ class BookingController extends Controller
         $cars = Car::all();
         return view('booking.create', ['cars' => $cars ]);
     }
+
+    public function history() {
+        $car_booking_history= CarBooking::where('status', '=', 'returned')->get();
+        return view('booking.history', ['car_booking_history' => $car_booking_history]);
+     }
 
     public function store(Request $request)
     {
