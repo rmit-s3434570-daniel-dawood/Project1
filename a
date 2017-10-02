@@ -1,0 +1,127 @@
+[1mdiff --cc resources/views/booking/create.blade.php[m
+[1mindex ee88a21,bea4d0f..0000000[m
+[1m--- a/resources/views/booking/create.blade.php[m
+[1m+++ b/resources/views/booking/create.blade.php[m
+[36m@@@ -34,17 -34,20 +34,33 @@@[m
+      </select>[m
+  </div>[m
+  [m
+[32m++<<<<<<< HEAD[m
+[32m +<div class="form-inline">[m
+[32m +    <div class="form-group">[m
+[32m +    {!! Form::label('start_date', 'Booking Start Date') !!}[m
+[32m +    {!! Form::input('date', 'start_date', null, ['class' => 'form-control']) !!}[m
+[32m +   <div class="form-group">[m
+[32m +    {!! Form::label('end_date', 'Booking End Date') !!}[m
+[32m +    {!! Form::input('date', 'end_date', null, ['class' => 'form-control']) !!}[m
+[32m++=======[m
+[32m+ <<<<<<< HEAD[m
+[32m+ <div class="form-inline">[m
+[32m+     <div class="form-group">[m
+[32m+     {!! Form::label('start_date', 'Booking Start Date') !!}[m
+[32m+     {!! Form::input('date', 'start_date', null, ['class' => 'form-control'], ['id' => 'start_date']) !!}[m
+[32m+    <div class="form-group" id="end_date">[m
+[32m+     {!! Form::label('end_date', 'Booking End Date') !!}[m
+[32m+     {!! Form::input('date', 'end_date', null, ['class' => 'form-control'], ['id' => 'end_date']) !!}[m
+[32m++>>>>>>> ee7a0cf175bee9703643a0d6c38dc94749afeb4f[m
+      </div>[m
+      </div>[m
+  </div>[m
+  [m
+[32m++<<<<<<< HEAD[m
+[32m++=======[m
+[32m+ =======[m
+[32m+ >>>>>>> ba2834167a551e092a55c0a6fdfe6b4bab2e8148[m
+[32m++>>>>>>> ee7a0cf175bee9703643a0d6c38dc94749afeb4f[m
+  <div class="form-group">[m
+      {!! Form::label('name', 'Name') !!}[m
+      {!! Form::text('name', '', ['class' => 'form-control']) !!}[m
+[1mdiff --cc resources/views/booking/index.blade.php[m
+[1mindex c51e397,00d778a..0000000[m
+[1m--- a/resources/views/booking/index.blade.php[m
+[1m+++ b/resources/views/booking/index.blade.php[m
+[36m@@@ -1,35 -1,17 +1,54 @@@[m
+  @extends('layouts.master')[m
+[32m++<<<<<<< HEAD[m
+[32m +@section('title', 'View all Bookings')[m
+[32m +@section('content')[m
+[32m +<div class="container col-md-8 col-md-offset-2">[m
+[32m +<div class="panel panel-default">[m
+[32m +<div class="panel-heading">[m
+[32m +<center><h2> Bookings </h2></center>[m
+[32m +</div>[m
+[32m +@if ($car_booking->isEmpty())[m
+[32m +<p> There are currently no Bookings available.</p>[m
+[32m +@else[m
+[32m +<table class="table">[m
+[32m +<thead>[m
+[32m +<tr>[m
+[32m +    <th>ID</th>[m
+[32m +    <th>Name</th>[m
+[32m +    <th>Email</th>[m
+[32m +</tr>[m
+[32m +</thead>[m
+[32m +<tbody>[m
+[32m +@foreach($car_booking as $car_booking)[m
+[32m +<tr>[m
+[32m +    <td>[m
+[32m +        <a href="{!! action('BookingController@show', $car_booking->id) !!}">{!! $car_booking->id !!} </a>[m
+[32m +    </td>[m
+[32m +    <td>{!! $car_booking->email !!}</td>[m
+[32m +    <td>{!! $car_booking->status !!}</td>[m
+[32m +</tr>[m
+[32m +@endforeach[m
+[32m +</tbody>[m
+[32m +</table>[m
+[32m +@endif[m
+[32m +</div>[m
+[32m +</div>[m
+[31m- @endsection[m
+[32m++@endsection[m
+[32m++=======[m
+[32m+ @section('title', 'List of Bookings')[m
+[32m+ @section('content')[m
+[32m+ [m
+[32m+ <div> List of Bookings</div>[m
+[32m+ [m
+[32m+ <p>[m
+[32m+ [m
+[32m+ <ul>[m
+[32m+     @foreach($car_booking as $car_booking)[m
+[32m+         <li>{{ $car_booking->name}}</li>[m
+[32m+     @endforeach[m
+[32m+ </ul>[m
+[32m+ [m
+[32m+ </p>[m
+[32m+ [m
+[32m+ @endsection[m
+[32m++>>>>>>> ee7a0cf175bee9703643a0d6c38dc94749afeb4f[m
+[1mdiff --cc resources/views/booking/show.blade.php[m
+[1mindex 1072dee,5116001..0000000[m
+[1m--- a/resources/views/booking/show.blade.php[m
+[1m+++ b/resources/views/booking/show.blade.php[m
+[36m@@@ -1,10 -1,15 +1,24 @@@[m
+  @extends('layouts.master')[m
+[32m++<<<<<<< HEAD[m
+[32m +@section('title', 'View a Booking')[m
+[32m +@section('content')[m
+[32m +[m
+[32m +{{ $car_booking_id ->name }}[m
+[32m +{{ $car_booking_id ->email }}[m
+[32m +{{ $car_booking_id ->status }}[m
+[32m++=======[m
+[32m+ @section('title', 'List of Bookings')[m
+[32m+ @section('content')[m
+[32m+ [m
+[32m+ <div> List of Bookings</div>[m
+[32m+ [m
+[32m+ <p>[m
+[32m+ [m
+[32m+         {{ $car_booking_id -> country }}[m
+[32m+ [m
+[32m+ [m
+[32m+ </p>[m
+[32m++>>>>>>> ee7a0cf175bee9703643a0d6c38dc94749afeb4f[m
+  [m
+  @endsection[m
+  [m

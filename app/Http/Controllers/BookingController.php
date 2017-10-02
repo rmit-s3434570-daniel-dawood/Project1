@@ -11,6 +11,16 @@ class BookingController extends Controller
 {
     //
 
+    public function index() {
+        $car_booking = CarBooking::all();
+        return view('booking.index', ['car_booking' => $car_booking ]);
+    }
+
+    public function show($id) {
+        $car_booking_details = CarBookingDetails::find($id);
+        return view('booking.show', ['car_booking_id' => $car_booking_details]);
+    }
+
     public function create()
     {
         $cars = Car::all();
@@ -55,13 +65,4 @@ class BookingController extends Controller
 
         return redirect()->route('thankyou');
     }
-        public function show($id)
-        {
-            $car_booking = CarBooking::find($id);
-            return view('booking.show', ['car_booking_id' => $car_booking]);
-        }
-        public function index()
-        {
-            $car_booking
-}    
 }
