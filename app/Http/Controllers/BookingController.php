@@ -21,6 +21,29 @@ class BookingController extends Controller
         return view('booking.show', ['car_booking_id' => $car_booking_details]);
     }
 
+    public function update(Request $request, $id)
+    {
+        try{
+            //Find the user object from model if it exists
+            $statusUpdate= CarBooking::findOrFail($id);
+
+            //$request contain your post data sent from your edit from
+            //$user is an object which contains the column names of your table
+
+            //Set user object attributes
+            $statusUpdate->status= $request['status'];
+
+            // Save/update user.
+            // This will will update your the row in ur db.
+            $statusUpdate->save();
+
+            return view('booking.show', ['car_booking_id' => $statusUpdate]);
+        }
+        catch(ModelNotFoundException $err){
+            //Show error page
+        }
+    }
+
     public function create()
     {
         $cars = Car::all();
@@ -30,7 +53,7 @@ class BookingController extends Controller
     public function history() {
         $car_booking_history= CarBooking::where('status', '=', 'returned')->get();
         return view('booking.history', ['car_booking_history' => $car_booking_history]);
-     }
+    }
 
     public function store(Request $request)
     {
@@ -60,7 +83,7 @@ class BookingController extends Controller
         $bookingDetails->end_date = $allRequest['end_date'];
         $bookingDetails->booking_id = $car_booking->id;
         $bookingDetails->save();
-        
+
 
         /*
          * Using sessions
