@@ -90,14 +90,15 @@
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background-color: #333;
+                background-color: #222222;
+                font-weight: 600;
             }
 
             li {
                 float: left;
             }
 
-            .nav{
+            li a {
                 display: block;
                 color: white;
                 text-align: center;
@@ -105,9 +106,17 @@
                 text-decoration: none;
             }
 
-            .nav:hover {
-                background-color: #111;
+            li a:hover {
+                background-color: #fec503;
+                font-weight: 400;
             }
+
+            @media screen and (max-width: 700px){
+            ul.topnav li.right, 
+            ul.topnav li {float: none;}
+            }
+
+            
             
             .front-content-info {
                 list-style-type: none;
@@ -132,6 +141,7 @@
                 height: 250px;
                 background-color: #CD7F32;
             }
+            
             
 
         </style>
@@ -210,12 +220,12 @@
         </div>
         
         <div>
-            <ul>
-              <li><a class="nav"  href="/">Home</a></li>
-              <li><a class="nav"  href="/vehicles">Vehicles</a></li>
-              <li><a class="nav"  href="/locations">Locations</a></li>
-              <li><a class="nav"  href="/contact">Contact</a></li>
-              <li><a class="nav" href="/about">About</a></li>
+            <ul class="topnav">
+              <li><a href="/">Home</a></li>
+              <li><a href="/vehicles">Vehicles</a></li>
+              <li><a href="/locations">Locations</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/about">About</a></li>
             </ul>
         </div>
         
@@ -275,7 +285,7 @@
         
         
         <div>
-            <ul>
+            <ul class="topnav">
               <li><a href="/faq">FAQs</a></li>
               <li><a href="/privacy">Privacy Policy</a></li>
               <li><a href="/terms">Terms of Use</a></li>
