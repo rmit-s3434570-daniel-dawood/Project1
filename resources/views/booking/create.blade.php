@@ -34,7 +34,6 @@
     </select>
 </div>
 
-<<<<<<< HEAD
 <div class="form-inline">
     <div class="form-group">
     {!! Form::label('start_date', 'Booking Start Date') !!}
@@ -42,8 +41,7 @@
    <div class="form-group">
     {!! Form::label('end_date', 'Booking End Date') !!}
     {!! Form::input('date', 'end_date', null, ['class' => 'form-control']) !!}
-=======
-<<<<<<< HEAD
+
 <div class="form-inline">
     <div class="form-group">
     {!! Form::label('start_date', 'Booking Start Date') !!}
@@ -51,16 +49,10 @@
    <div class="form-group" id="end_date">
     {!! Form::label('end_date', 'Booking End Date') !!}
     {!! Form::input('date', 'end_date', null, ['class' => 'form-control'], ['id' => 'end_date']) !!}
->>>>>>> ee7a0cf175bee9703643a0d6c38dc94749afeb4f
     </div>
     </div>
 </div>
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ba2834167a551e092a55c0a6fdfe6b4bab2e8148
->>>>>>> ee7a0cf175bee9703643a0d6c38dc94749afeb4f
 <div class="form-group">
     {!! Form::label('name', 'Name') !!}
     {!! Form::text('name', '', ['class' => 'form-control']) !!}
