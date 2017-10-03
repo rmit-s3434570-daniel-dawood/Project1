@@ -19,8 +19,7 @@ class CreateCarBookingDetailsTable extends Migration
             /*
              * Other columns in the table
              */
-            $table->string('address_line_1');
-            $table->string('address_line_2');
+            $table->string('address');
             $table->string('mobile');
             $table->dateTime('start_date');
             $table->dateTime('end_date');

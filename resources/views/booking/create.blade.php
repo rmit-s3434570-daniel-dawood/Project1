@@ -27,20 +27,12 @@
 
 <div class="form-group">
     {!! Form::Label('car', 'Car:') !!}
-    <select class="form-control" name="item_id">
+    <select class="form-control" name="transaction_id">
         @foreach($cars as $car)
         <option value="{{$car->id}}">{{$car->name}}</option>
         @endforeach
     </select>
 </div>
-
-<div class="form-inline">
-    <div class="form-group">
-    {!! Form::label('start_date', 'Booking Start Date') !!}
-    {!! Form::input('date', 'start_date', null, ['class' => 'form-control']) !!}
-   <div class="form-group">
-    {!! Form::label('end_date', 'Booking End Date') !!}
-    {!! Form::input('date', 'end_date', null, ['class' => 'form-control']) !!}
 
 <div class="form-inline">
     <div class="form-group">
@@ -69,15 +61,9 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('address_line_1', 'Address') !!}
-    {!! Form::text('address_line_1', '', ['class' => 'form-control']) !!}
+    {!! Form::label('address', 'Address') !!}
+    {!! Form::text('address', '', ['class' => 'form-control']) !!}
 </div>
-
-<div class="form-group">
-    {!! Form::label('address_line_2', 'Address') !!}
-    {!! Form::text('address_line_2', '', ['class' => 'form-control']) !!}
-</div>
-
 
 <button class="btn btn-success" type="submit">Book Now!</button>
 

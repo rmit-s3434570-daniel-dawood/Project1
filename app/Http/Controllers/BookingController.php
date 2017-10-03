@@ -60,24 +60,22 @@ class BookingController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email',
-            'item_id' => 'required',
-            'address_line_1' => 'required',
-            'address_line_2' => 'required',
+            'address' => 'required',
             'mobile' => 'required',
             'start_date' => 'required',
             'end_date' => 'required',
+            'transaction_id' => 'required',
         ]);
 
         $allRequest = $request->all();
         $car_booking = new CarBooking();
         $car_booking->name = $allRequest['name'];
         $car_booking->email = $allRequest['email'];
-        $car_booking->car_id = $allRequest['item_id'];
+        $car_booking->car_id = $allRequest['transaction_id'];
         $car_booking->save();
 
         $bookingDetails = new CarBookingDetails();
-        $bookingDetails->address_line_1 = $allRequest['address_line_1'];
-        $bookingDetails->address_line_2 = $allRequest['address_line_2'];
+        $bookingDetails->address = $allRequest['address'];
         $bookingDetails->mobile = $allRequest['mobile'];
         $bookingDetails->start_date = $allRequest['start_date'];
         $bookingDetails->end_date = $allRequest['end_date'];

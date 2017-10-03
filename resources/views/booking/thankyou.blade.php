@@ -13,8 +13,7 @@
         <b>Below are the details</b>
         <p>Start Date: {!! Session::get('bookingDetails')->start_date !!}</p>
         <p>End Date: {!! Session::get('bookingDetails')->end_date !!}</p>
-        <p>Address: {!! Session::get('bookingDetails')->address_line_1 !!}
-            {!! Session::get('bookingDetails')->address_line_2 !!}</p>
+        <p>Address: {!! Session::get('bookingDetails')->address !!}
 
     @endif
 @endsection
