@@ -70,8 +70,7 @@
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background-color: #222222;
-                font-weight: 600;
+                background-color: #333;
             }
 
             li {
@@ -87,13 +86,7 @@
             }
 
             li a:hover {
-                background-color: #fec503;
-                font-weight: 400;
-            }
-            
-            @media screen and (max-width: 700px){
-            ul.topnav li.right, 
-            ul.topnav li {float: none;}
+                background-color: #111;
             }
         
         </style>
@@ -120,7 +113,7 @@
         </div>
         
         <div>
-            <ul class="topnav">
+            <ul>
               <li><a href="/">Home</a></li>
               <li><a href="/vehicles">Vehicles</a></li>
               <li><a href="/locations">Locations</a></li>
@@ -132,11 +125,22 @@
         <!-- FAQ -->
         <legend>Ducky Terms of Use</legend>
        
-        <p>Terms of Use here</p>
+        <p>Ducky’s service commitment to our members is to always:<br>
+            <br>
+            Ensure all members have access to clean, well-maintained new or near-new cars<br>
+            Ensure that the cars are returned on time for the next member<br>
+            Ensure that the cars have at least ¼ of tank of petrol for the next member<br>
+            Ensure that everything is done to ensure the safety of members when using our vehicles<br>
+            Provide excellent customer service and maintain integrity in all our actions<br>
+            This means that we closely manage our fleet, picking up any problems as soon as members report them.<br>
+            <br>
+            Carsharing works best when members are considerate of the other members with whom they are sharing cars. 
+            For this reason, members must follow our Terms and Conditions to ensure the Ducky service is convenient and 
+            reliable for all our members.</p>
         
         <!-- Footer -->
         <div>
-            <ul class="topnav">
+            <ul>
               <li><a href="/faq">FAQs</a></li>
               <li><a href="/privacy">Privacy Policy</a></li>
               <li><a href="/terms">Terms of Use</a></li>

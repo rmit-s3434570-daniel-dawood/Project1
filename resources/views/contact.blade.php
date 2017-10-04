@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Contact Ducky')
+
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -70,8 +70,7 @@
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background-color: #222222;
-                font-weight: 600;
+                background-color: #333;
             }
 
             li {
@@ -87,13 +86,7 @@
             }
 
             li a:hover {
-                background-color: #fec503;
-                font-weight: 400;
-            }
-            
-            @media screen and (max-width: 700px){
-            ul.topnav li.right, 
-            ul.topnav li {float: none;}
+                background-color: #111;
             }
         
         </style>
@@ -120,7 +113,7 @@
         </div>
         
         <div>
-            <ul class="topnav">
+            <ul>
               <li><a href="/">Home</a></li>
               <li><a href="/vehicles">Vehicles</a></li>
               <li><a href="/locations">Locations</a></li>
@@ -158,7 +151,7 @@
         
         <!-- Footer -->
         <div>
-            <ul class="topnav">
+            <ul>
               <li><a href="/faq">FAQs</a></li>
               <li><a href="/privacy">Privacy Policy</a></li>
               <li><a href="/terms">Terms of Use</a></li>

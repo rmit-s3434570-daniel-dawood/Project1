@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>About Ducky</title>
+        <title>Contact Ducky</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -70,8 +70,7 @@
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background-color: #222222;
-                font-weight: 600;
+                background-color: #333;
             }
 
             li {
@@ -87,13 +86,7 @@
             }
 
             li a:hover {
-                background-color: #fec503;
-                font-weight: 400;
-            }
-            
-            @media screen and (max-width: 700px){
-            ul.topnav li.right, 
-            ul.topnav li {float: none;}
+                background-color: #111;
             }
         
         </style>
@@ -121,7 +114,7 @@
         </div>
         
         <div>
-            <ul class="topnav">
+            <ul>
               <li><a href="/">Home</a></li>
               <li><a href="/vehicles">Vehicles</a></li>
               <li><a href="/locations">Locations</a></li>
@@ -135,21 +128,27 @@
             <div class="panel panel-default">
                 <div class="panel-heading">What is Ducky?</div>
                 <div class="panel-body">Ducky is a application allowing customers to 
-                rent a car in the Melbourne CBD area at anytime. Simply book a car, pick it up from our large set of locations and return it when you're done. It's that easy.</div>
+                rent a car anywhere and at anytime, etc.</div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">Why use Ducky?</div>
-                <div class="panel-body">Ducky allows you to choose from a wide range of cars.</div>
+                <div class="panel-body">It allows for on demand car bookings at any time as well as
+                allowing members to book cars for multiple weeks. </div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">Ducky Team</div>
-                <div class="panel-body">Edison, Shaun, Daniel and Kelvin</div>
+                <div class="panel-body">
+                    Edison - <br>
+                    Daniel - <br>
+                    Kelvin - <br>
+                    Shaun - 
+                </div>
             </div>
         </div>
         
         <!-- Footer -->
         <div>
-            <ul class="topnav">
+            <ul>
               <li><a href="/faq">FAQs</a></li>
               <li><a href="/privacy">Privacy Policy</a></li>
               <li><a href="/terms">Terms of Use</a></li>

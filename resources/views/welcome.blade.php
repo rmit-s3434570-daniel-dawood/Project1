@@ -10,8 +10,10 @@
         <title>Ducky</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" type="text/css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+        
+        
         <!-- Styles -->
         <style>
             html, body {
@@ -90,15 +92,14 @@
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background-color: #222222;
-                font-weight: 600;
+                background-color: #333;
             }
 
             li {
                 float: left;
             }
 
-            li a {
+            .nav{
                 display: block;
                 color: white;
                 text-align: center;
@@ -106,17 +107,9 @@
                 text-decoration: none;
             }
 
-            li a:hover {
-                background-color: #fec503;
-                font-weight: 400;
+            .nav:hover {
+                background-color: #111;
             }
-
-            @media screen and (max-width: 700px){
-            ul.topnav li.right, 
-            ul.topnav li {float: none;}
-            }
-
-            
             
             .front-content-info {
                 list-style-type: none;
@@ -138,10 +131,10 @@
             
             .col-sm-3 {
                 display: block, center;
-                height: 250px;
-                background-color: #CD7F32;
+                height: 350px;
+                background-color: white;
+                background-image: url(/images/c4.png);
             }
-            
             
 
         </style>
@@ -162,7 +155,9 @@
     </div>
 
     <body>
-        
+     
+    
+    <!--    
     <script>
 
         function downloadUrl(url,callback) {
@@ -212,6 +207,7 @@
         });
 
     </script>
+    -->
 
 
 
@@ -220,15 +216,66 @@
         </div>
         
         <div>
-            <ul class="topnav">
-              <li><a href="/">Home</a></li>
-              <li><a href="/vehicles">Vehicles</a></li>
-              <li><a href="/locations">Locations</a></li>
-              <li><a href="/contact">Contact</a></li>
-              <li><a href="/about">About</a></li>
+            <ul>
+              <li><a class="nav"  href="/">Home</a></li>
+              <li><a class="nav"  href="/vehicles">Vehicles</a></li>
+              <li><a class="nav"  href="/locations">Locations</a></li>
+              <li><a class="nav"  href="/contact">Contact</a></li>
+              <li><a class="nav" href="/about">About</a></li>
             </ul>
         </div>
         
+        
+        <div class="container" id="map">
+            <div class="w3-display-container mySlides">
+                <img src="/images/carousel1.jpg" style="height:395px; width: 100%">
+                <div class="w3-display-middle w3-padding-16" style:"color: white">
+                    <h1>Travel with the family</h1>
+                </div>
+            </div>
+            <div class="w3-display-container mySlides">
+                <img src="/images/carousel2.jpg" style="height:395px; width: 100%">
+                <div class="w3-display-middle w3-padding-16" style:"color: white">
+                    <h1>A Variety of cars</h1>
+                </div>
+            </div>
+            <div class="w3-display-container mySlides">
+                <img src="/images/carousel3.jpg" style="height:395px; width: 100%">
+                <div class="w3-display-middle w3-padding-16" style:"color: white">
+                    <h1>Stored at many locations</h1>
+                </div>
+            </div>
+            <div class="w3-display-container mySlides">
+                <img src="/images/c4.png" style="height:395px; width: 100%">
+                <div class="w3-display-middle w3-padding-16" style:"color: white">
+                    <h1>Travel the city</h1>
+                </div>
+            </div>
+            
+        </div>
+        
+        <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+                 x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 5000); // Change image every 2 seconds
+        }
+        </script>
+        
+        
+        
+        
+        
+        <!-- 
         <div class="container" id='map'></div>
         <script>
             function initMap() {
@@ -255,42 +302,54 @@
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfo7clIjcqC3ptT6-t3SdRFZd-j99wCWo&libraries=places&callback=initMap">
         </script>
         
+        -->
         <div class="front-content-info">
             <li>
-                {{-- add dots --}}
-                <li class="front-content-text"><h3>Drive all around Melbourne</h3></li>
-                <li class="front-content-text"><h3>Multiple Cars</h3></li>
-                <li class="front-content-text"><h3>Multiple Locations</h3></li>
+                <li class="front-content-text"><h3><img src="/images/dot.png" style:"display: inline">Drive all around Melbourne</h3></li>
+                <li class="front-content-text"><h3><img src="/images/dot.png" style:"display: inline">Multiple Cars</h3></li>
+                <li class="front-content-text"><h3><img src="/images/dot.png" style:"display: inline">Multiple Locations</h3></li>
             </li>
         </div>
-        
+
+
         <div class="divider"></div>
         
-        <div class="front-grid">
-            <div class="col-sm-0.5"></div>
-            <div class="col-sm-3"><h3>Book Vehicles near you, Any hour of the day</h3>
-                <br><button type="button" class="btn btn-primary">
-                    <a href="/booking/create" >Book Now</a></button></div>
-                
-            <div class="col-sm-1"></div>
-            <div class="col-sm-3"><h3>A wide range of Vehicles, Get the right vehicle</h3>
-                <br><button type="button" class="btn btn-primary">
-                    <a href="/vehicles">View Vehicles</a></button></div>
-                
-            <div class="col-sm-1"></div>
-            <div class="col-sm-3"><h3>Fuel, cleaning, rego and servicing all included</h3>
-                <br><button type="button" class="btn btn-primary">
-                    <a href="auth/register" >Join Now</a></button></div>
-        </div>
-        
-        
+        <div class="col-sm-3" style="margin: 25px">
+            <div class="panel" style="margin: 25px; background: transparent; color: white">
+                <h3>Book Vehicles near you, Any hour of the day</h3>
+                <br><button type="button" class="btn btn-warning">
+                <a href="/booking/create" >Book Now</a></button></div>
+            </div>
+        </div>    
+
+        <div class="col-sm-3" style="margin: 25px">
+            <div class="panel" style="margin: 25px; background: transparent; color: white">
+                <h3>Wide Range of Cars, Get the right vehicle</h3>
+                <br><button type="button" class="btn btn-warning">
+                <a href="/vehicles">View Vehicles</a></button></div>
+            </div>
+        </div>  
+
+        <div class="col-sm-3" style="margin: 25px">
+            <div class="panel" style="margin: 25px; background: transparent; color: white">
+                <h3>Fuel, cleaning, rego and servicing included</h3>
+                <br><button type="button" class="btn btn-warning">
+                <a href="auth/register" >Join Now</a></button></div>
+            </div>
+        </div>  
+        <div class="row"></div>
+
+
         <div>
-            <ul class="topnav">
-              <li><a href="/faq">FAQs</a></li>
-              <li><a href="/privacy">Privacy Policy</a></li>
-              <li><a href="/terms">Terms of Use</a></li>
-              <li><a href="/refund">Refund Policy</a></li>
+            <ul>
+              <li><a class="nav" href="/faq">FAQs</a></li>
+              <li><a class="nav" href="/privacy">Privacy Policy</a></li>
+              <li><a class="nav" href="/terms">Terms of Use</a></li>
+              <li><a class="nav" href="/refund">Refund Policy</a></li>
             </ul> 
         </div>        
+
+        
+      
     </body>
 </html>

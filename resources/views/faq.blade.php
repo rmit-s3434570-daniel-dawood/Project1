@@ -70,8 +70,7 @@
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background-color: #222222;
-                font-weight: 600;
+                background-color: #333;
             }
 
             li {
@@ -87,13 +86,7 @@
             }
 
             li a:hover {
-                background-color: #fec503;
-                font-weight: 400;
-            }
-            
-            @media screen and (max-width: 700px){
-            ul.topnav li.right, 
-            ul.topnav li {float: none;}
+                background-color: #111;
             }
         
         </style>
@@ -120,7 +113,7 @@
         </div>
         
         <div>
-            <ul class="topnav">
+            <ul>
               <li><a href="/">Home</a></li>
               <li><a href="/vehicles">Vehicles</a></li>
               <li><a href="/locations">Locations</a></li>
@@ -138,7 +131,11 @@
                 </h4>
             </div>
             <div id="collapse1" class="panel-collapse collapse">
-                <div class="panel-body">How to book a vehicle</div>
+                <div class="panel-body">
+                    <a href="#">The system isn't letting me make a booking</a><br>
+                    <a href="#">Forgot my username or password</a><br>
+                    <a href="#">I need to change my booking</a><br>
+                </div>
             </div>
         </div>   
         <br>
@@ -149,7 +146,11 @@
                 </h4>
             </div>
             <div id="collapse2" class="panel-collapse collapse">
-                <div class="panel-body">Billing info</div>
+                <div class="panel-body">
+                    <a href="#">PayPal</a><br>
+                    <a href="#">Credit Cards or Master Cards</a><br>
+                    <a href="#">How to view invoices</a><br>                    
+                </div>
             </div>             
         </div> 
         <br>
@@ -160,7 +161,11 @@
                 </h4>
             </div>
             <div id="collapse3" class="panel-collapse collapse">
-                <div class="panel-body">info about the cars</div>
+                <div class="panel-body">
+                    <a href="#">What cars do you have?</a><br>
+                    <a href="#">What areas do you operate?</a><br>
+                    <a href="#">What cars are near me?</a><br>                    
+                </div>
             </div>             
         </div>          
         <br>
@@ -171,7 +176,11 @@
                 </h4>
             </div>
             <div id="collapse4" class="panel-collapse collapse">
-                <div class="panel-body">Info in case of crashes</div>
+                <div class="panel-body">
+                    <a href="#">Car has damage, what do I do?</a><br>
+                    <a href="#">I had an accident</a><br>
+                    <a href="#">I accidentally damaged the car</a><br>                    
+                </div>
             </div>             
         </div>          
         <br>
@@ -182,7 +191,11 @@
                 </h4>
             </div>
             <div id="collapse5" class="panel-collapse collapse">
-                <div class="panel-body">Info on memberships</div>
+                <div class="panel-body">
+                    <a href="#">Do you have plans?</a><br>
+                    <a href="#">How many drivers can be on my account?</a><br>
+                    <a href="#">I need a car for a few weeks</a><br>                    
+                </div>
             </div>             
         </div>          
         
@@ -190,7 +203,7 @@
         
         <!-- Footer -->
         <div>
-            <ul class="topnav">
+            <ul>
               <li><a href="/faq">FAQs</a></li>
               <li><a href="/privacy">Privacy Policy</a></li>
               <li><a href="/terms">Terms of Use</a></li>
