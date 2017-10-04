@@ -132,11 +132,17 @@
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">Why use Ducky?</div>
-                <div class="panel-body">Info here</div>
+                <div class="panel-body">It allows for on demand car bookings at any time as well as
+                allowing members to book cars for multiple weeks. </div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">Ducky Team</div>
-                <div class="panel-body">sdsd</div>
+                <div class="panel-body">
+                    Edison - <br>
+                    Daniel - <br>
+                    Kelvin - <br>
+                    Shaun - 
+                </div>
             </div>
         </div>
         

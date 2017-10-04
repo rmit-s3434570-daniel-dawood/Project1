@@ -88,6 +88,16 @@
             li a:hover {
                 background-color: #111;
             }
+            
+            
+            .each-item
+            {
+                position:relative;
+                overflow:hidden;
+            }
+        
+        
+        
         
         </style>
     </head>
@@ -123,9 +133,26 @@
             </ul>
         </div>
         
-        <!-- Vehicles -->
+        <div>
+        <legend>Ducky Vehicles</legend>  
+        
+
+        <button class="btn btn-primary filter-button" data-filter="all">All</button>
+        <button class="btn btn-default filter-button" data-filter="Hyundai">Hyundai</button>
+        <button class="btn btn-default filter-button" data-filter="Kia">Kia</button>
+        <button class="btn btn-default filter-button" data-filter="Toyota">Toyota</button>
+        <button class="btn btn-default filter-button" data-filter="Audi">Audi</button>        
+        </div>
+        
+
+        <br>
+        
+        
+        
+        <!-- Vehicles -->        
         <div class = "Vehicle-container" >
-        	<div class="Car-1" style="width:80%; height: 200px; align: center; border-style:groove;">
+
+        	<div class="Hyundai" style="width:80%; height: 200px; align: center; border-style:groove;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left">
 			        <h2> Hyundai i30 Wagon</h2>
 			        <p>add image</p>
@@ -141,8 +168,9 @@
 		    	</div>
 			</div>
 			<br><br><br>
-			<div class="Car-2" style="width:80%; height: 200px; align: center; border-style:groove;">
-			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
+			<div class="All Kia" style="width:80%; height: 200px; align: center; border-style:groove;">
+			    <div class="each-item">
+			     <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
 			        <h2> Kia Sportage </h2>
 			        <p>add image</p>
 			    </div>
@@ -155,11 +183,12 @@
                     </div>
 		    	    <p><a class="btn btn-primary btn-lg" href="/booking/create" role="button">Book now!</a></p>
 		    	</div>
+			    </div>
 			</div>
 			<br><br><br>
-			<div class="Car-3" style="width:80%; height: 200px; align: center; border-style:groove;">
+			<div class="Toyota" style="width:80%; height: 200px; align: center; border-style:groove;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
-			        <h2> Toyato Yaris </h2>
+			        <h2> Toyota Yaris </h2>
 			        <p>add image</p>
 			    </div>
 		    	<div class="col-xs-6 col-md-4" style="float:right">
@@ -173,7 +202,7 @@
 		    	</div>
 			</div>
 			<br><br><br>
-			<div class="Car-4" style="width:80%; height: 200px; align: center; border-style:groove;">
+			<div class="Audi" style="width:80%; height: 200px; align: center; border-style:groove;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
 			        <h2> Audi A1</h2>
 			        <p>add image</p>
@@ -189,7 +218,7 @@
 		    	</div>
 			</div>
 			<br><br><br>
-			<div class="Car-5" style="width:80%; height: 200px; align: center; border-style:groove;">
+			<div class="Coming Soon" style="width:80%; height: 200px; align: center; border-style:groove;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
 			        <h2> Coming Soon</h2>
 			        <p>add image</p>
@@ -205,7 +234,7 @@
 		    	</div>
 			</div>
 			<br><br><br>			
-			<div class="Car-6" style="width:80%; height: 200px; align: center; border-style:groove;">
+			<div class="Coming Soon" style="width:80%; height: 200px; align: center; border-style:groove;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
 			        <h2> Coming Soon</h2>
 			        <p>add image</p>
@@ -222,6 +251,34 @@
 			</div>			
 			<br><br><br>			
         </div>
+        
+        <script>
+        $(document).ready(function(){
+
+            $(".filter-button").click(function(){
+                var value = $(this).attr('data-filter');
+        
+                if(value == "all")
+                {
+                 //$('.filter').removeClass('hidden');
+                    $('.filter').show('1000');
+                }
+                else
+                {
+                    //$('.filter[filter-item="'+value+'"]').removeClass('hidden');
+                    //$(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+                    $(".filter").not('.'+value).hide('3000');
+                    $('.filter').filter('.'+value).show('3000');
+            
+                }
+            });
+    
+        });
+
+        </script>        
+        
+        
+        
         
         
         <br>
