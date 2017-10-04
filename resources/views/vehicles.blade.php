@@ -70,8 +70,7 @@
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background-color: #222222;
-                font-weight: 600;
+                background-color: #333;
             }
 
             li {
@@ -87,14 +86,18 @@
             }
 
             li a:hover {
-                background-color: #fec503;
-                font-weight: 400;
+                background-color: #111;
             }
-	    
-	    @media screen and (max-width: 700px){
-            ul.topnav li.right, 
-            ul.topnav li {float: none;}
+            
+            
+            .each-item
+            {
+                position:relative;
+                overflow:hidden;
             }
+        
+        
+        
         
         </style>
     </head>
@@ -121,21 +124,50 @@
         </div>
         
         <div>
-            <ul class="topnav">
+            <ul>
               <li><a href="/">Home</a></li>
               <li><a href="/vehicles">Vehicles</a></li>
               <li><a href="/locations">Locations</a></li>
               <li><a href="/contact">Contact</a></li>
               <li><a href="/about">About</a></li>
+
+              <div class = "pull-right">
+                <form class="navbar-form">
+		            <div class="input-group">
+			            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+			            <div class="input-group-btn">
+				            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+			            </div>
+		            </div>
+		        </form> 
+              </div>
+              
             </ul>
         </div>
         
-        <!-- Vehicles -->
+        <div>
+        <legend>Ducky Vehicles</legend>  
+        
+
+        <button class="btn btn-primary filter-button" data-filter="all">All</button>
+        <button class="btn btn-default filter-button" data-filter="Hyundai">Hyundai</button>
+        <button class="btn btn-default filter-button" data-filter="Kia">Kia</button>
+        <button class="btn btn-default filter-button" data-filter="Toyota">Toyota</button>
+        <button class="btn btn-default filter-button" data-filter="Audi">Audi</button>        
+        </div>
+        
+
+        <br>
+        
+        
+        
+        <!-- Vehicles -->        
         <div class = "Vehicle-container" >
-        	<div class="Car-1" style="width:80%; height: 200px; align: center; border-style:groove;">
+
+        	<div class="Hyundai" style="width:80%; height: 200px; align: center; border-style:groove;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left">
 			        <h2> Hyundai i30 Wagon</h2>
-			        <p><img src="images/hyundai i30 wagon.jpg" alt="Hyundai i30 Wagon" height="125" width="300"></p>
+			        <p>add image</p>
 			    </div>
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $40 p/day</h3>
@@ -148,10 +180,11 @@
 		    	</div>
 			</div>
 			<br><br><br>
-			<div class="Car-2" style="width:80%; height: 200px; align: center; border-style:groove;">
-			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
+			<div class="All Kia" style="width:80%; height: 200px; align: center; border-style:groove;">
+			    <div class="each-item">
+			     <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
 			        <h2> Kia Sportage </h2>
-			        <p><img src="images/Kia Sportage.png" alt="Kia Sportage" height="125" width="300"></p>
+			        <p>add image</p>
 			    </div>
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $30 p/day</h3>
@@ -162,12 +195,13 @@
                     </div>
 		    	    <p><a class="btn btn-primary btn-lg" href="/booking/create" role="button">Book now!</a></p>
 		    	</div>
+			    </div>
 			</div>
 			<br><br><br>
-			<div class="Car-3" style="width:80%; height: 200px; align: center; border-style:groove;">
+			<div class="Toyota" style="width:80%; height: 200px; align: center; border-style:groove;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
-			        <h2> Toyato Yaris </h2>
-			        <p><img src="images/Toyota Yaris.png" alt="Toyota Yaris" height="125" width="300"></p>
+			        <h2> Toyota Yaris </h2>
+			        <p>add image</p>
 			    </div>
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $10 p/day</h3>
@@ -180,10 +214,10 @@
 		    	</div>
 			</div>
 			<br><br><br>
-			<div class="Car-4" style="width:80%; height: 200px; align: center; border-style:groove;">
+			<div class="Audi" style="width:80%; height: 200px; align: center; border-style:groove;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
 			        <h2> Audi A1</h2>
-			        <p><img src="images/Audi A1.jpg" alt="Audi A1" height="125" width="300"></p>
+			        <p>add image</p>
 			    </div>
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $5 p/day</h3>
@@ -196,7 +230,7 @@
 		    	</div>
 			</div>
 			<br><br><br>
-			<div class="Car-5" style="width:80%; height: 200px; align: center; border-style:groove;">
+			<div class="Coming Soon" style="width:80%; height: 200px; align: center; border-style:groove;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
 			        <h2> Coming Soon</h2>
 			        <p>add image</p>
@@ -212,7 +246,7 @@
 		    	</div>
 			</div>
 			<br><br><br>			
-			<div class="Car-6" style="width:80%; height: 200px; align: center; border-style:groove;">
+			<div class="Coming Soon" style="width:80%; height: 200px; align: center; border-style:groove;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
 			        <h2> Coming Soon</h2>
 			        <p>add image</p>
@@ -230,13 +264,41 @@
 			<br><br><br>			
         </div>
         
+        <script>
+        $(document).ready(function(){
+
+            $(".filter-button").click(function(){
+                var value = $(this).attr('data-filter');
+        
+                if(value == "all")
+                {
+                 //$('.filter').removeClass('hidden');
+                    $('.filter').show('1000');
+                }
+                else
+                {
+                    //$('.filter[filter-item="'+value+'"]').removeClass('hidden');
+                    //$(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+                    $(".filter").not('.'+value).hide('3000');
+                    $('.filter').filter('.'+value).show('3000');
+            
+                }
+            });
+    
+        });
+
+        </script>        
+        
+        
+        
+        
         
         <br>
         <br>
         <br>
         <!-- Footer -->
         <div>
-            <ul class="topnav">
+            <ul>
               <li><a href="/faq">FAQs</a></li>
               <li><a href="/privacy">Privacy Policy</a></li>
               <li><a href="/terms">Terms of Use</a></li>
