@@ -61,3 +61,7 @@ Route::resource('car', 'CarController');
 Route::resource('booking', 'BookingController'); 
 
 Route::post('booking/{id}', 'BookingController@update');
+
+Route::get('booking/create', function () {
+    
+})->middleware('auth');
