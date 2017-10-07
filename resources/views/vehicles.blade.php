@@ -167,7 +167,7 @@
         	<div class="Hyundai" style="width:80%; height: 200px; align: center; border-style:groove;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left">
 			        <h2> Hyundai i30 Wagon</h2>
-			        <p>add image</p>
+                <img src="/images/Hyundai i30 Wagon.jpg" alt="Hyundai i30 Wagon" height="130" width="330">
 			    </div>
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $40 p/day</h3>
@@ -184,7 +184,7 @@
 			    <div class="each-item">
 			     <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
 			        <h2> Kia Sportage </h2>
-			        <p>add image</p>
+			     <img src="/images/Kia Sportage.jpg" alt="Hyundai i30 Wagon" height="130" width="330">
 			    </div>
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $30 p/day</h3>
@@ -201,7 +201,7 @@
 			<div class="Toyota" style="width:80%; height: 200px; align: center; border-style:groove;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
 			        <h2> Toyota Yaris </h2>
-			        <p>add image</p>
+                <img src="/images/Toyota Yaris.jpg" alt="Hyundai i30 Wagon" height="130" width="330">
 			    </div>
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $10 p/day</h3>
@@ -217,7 +217,7 @@
 			<div class="Audi" style="width:80%; height: 200px; align: center; border-style:groove;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
 			        <h2> Audi A1</h2>
-			        <p>add image</p>
+                <img src="/images/Audi A1.jpg" alt="Hyundai i30 Wagon" height="130" width="330">
 			    </div>
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $5 p/day</h3>
@@ -230,10 +230,10 @@
 		    	</div>
 			</div>
 			<br><br><br>
-			<div class="Coming Soon" style="width:80%; height: 200px; align: center; border-style:groove;">
+			<div class="Toyota Corolla" style="width:80%; height: 200px; align: center; border-style:groove;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
-			        <h2> Coming Soon</h2>
-			        <p>add image</p>
+			        <h2> Toyota Corolla</h2>
+                <img src="/images/Toyota Corolla.jpg" alt="Hyundai i30 Wagon" height="130" width="330">
 			    </div>
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $? p/day</h3>
@@ -246,10 +246,10 @@
 		    	</div>
 			</div>
 			<br><br><br>			
-			<div class="Coming Soon" style="width:80%; height: 200px; align: center; border-style:groove;">
+			<div class="Suzuki Swift" style="width:80%; height: 200px; align: center; border-style:groove;">
 			    <div class="col-xs-12 col-sm-6 col-md-8" style="float:left" >
-			        <h2> Coming Soon</h2>
-			        <p>add image</p>
+			        <h2> Suzuki Swift</h2>
+                <img src="/images/Suzuki Swift.jpg" alt="Hyundai i30 Wagon" height="130" width="330">
 			    </div>
 		    	<div class="col-xs-6 col-md-4" style="float:right">
 		    	    <h3>Pricing - $? p/day</h3>

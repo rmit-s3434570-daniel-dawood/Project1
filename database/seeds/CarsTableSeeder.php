@@ -34,6 +34,19 @@ class CarsTableSeeder extends Seeder
             'name' => 'Ducky 4',
             'model' => 'Audi A1',
             'price' => '29000'
-        ]);    
+        ]);  
+        
+        DB::table('cars')->insert([
+            'name' => 'Ducky 5',
+            'model' => 'Suzuki Swift',
+            'price' => '18000'
+        ]);
+        
+        DB::table('cars')->insert([
+            'name' => 'Ducky 6',
+            'model' => 'Toyoto Corolla',
+            'price' => '22000'
+        ]);
+    
     }
 }
