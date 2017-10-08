@@ -9,8 +9,6 @@ use App\Car;
 
 class BookingController extends Controller
 {
-    //
-
     public function index() {
         $car_booking = CarBooking::where('status', '=', 'booked')->get();
         return view('booking.index', ['car_booking' => $car_booking ]);
@@ -91,4 +89,12 @@ class BookingController extends Controller
 
         return redirect()->route('thankyou');
     }
+        public function __construct()
+    {
+        $this->middleware('auth');
+    }
+        public function view() {
+            return view('booking.create');
+        }
+    
 }

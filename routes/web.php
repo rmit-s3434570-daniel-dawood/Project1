@@ -9,6 +9,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('booking/create', 'BookingController@view');
+
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
@@ -61,7 +64,3 @@ Route::resource('car', 'CarController');
 Route::resource('booking', 'BookingController'); 
 
 Route::post('booking/{id}', 'BookingController@update');
-
-Route::get('booking/create', function () {
-    
-})->middleware('auth');
