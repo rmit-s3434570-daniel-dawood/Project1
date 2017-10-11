@@ -10,6 +10,6 @@ class CarBookingDetails extends Model
     protected $fillable = [ 'mobile', 'address'];
 
     public function booking() {
-        return $this->belongsTo('App\CarBooking');
+        return $this->belongsTo('App\CarBooking', 'booking_id');
     }
 }
