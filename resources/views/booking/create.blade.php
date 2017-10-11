@@ -29,7 +29,7 @@
     {!! Form::Label('car', 'Car:') !!}
     <select class="form-control" name="transaction_id">
         @foreach($cars as $car)
-        <option value="{{$car->id}}">{{$car->name}}</option>
+        <option value="{{$car->id}}">{{$car->model}}</option>
         @endforeach
     </select>
 </div>

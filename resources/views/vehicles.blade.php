@@ -20,7 +20,7 @@
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Audi">
                 <a href="v1">
-                    <img src="/images/Audi A1.jpg" class="img-responsive">
+                    <img src="images/Audi A1.jpg" class="img-responsive">
                 </a>
             </div>
 

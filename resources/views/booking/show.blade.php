@@ -25,9 +25,9 @@
     </div>
     <div class="form-group">
         <strong>Start Date</strong>
-        <p>{{ $car_booking_id->start_date->format('j F Y')}}</p>
+        <p>{{ $car_booking_id->start_date }}</p>
         <strong>End Date</strong>
-        <p>{{ $car_booking_id->end_date->format('j F Y')}}</p>
+        <p>{{ $car_booking_id->end_date }} </p>
     </div>
 
     <form method="post" action="{!! action('BookingController@update', $car_booking_id->id) !!}">

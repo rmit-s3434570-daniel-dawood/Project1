@@ -3,25 +3,25 @@
 @section('content')
         <div class="container" id="map">
             <div class="w3-display-container mySlides">
-                <img src="/images/carousel1.jpg" style="height:395px; width: 100%">
+                <img src="images/carousel1.jpg" style="height:395px; width: 100%">
                 <div class="w3-display-middle w3-padding-16" style:"color: white">
                     <h1>Travel with the family</h1>
                 </div>
             </div>
             <div class="w3-display-container mySlides">
-                <img src="/images/carousel2.jpg" style="height:395px; width: 100%">
+                <img src="images/carousel2.jpg" style="height:395px; width: 100%">
                 <div class="w3-display-middle w3-padding-16" style:"color: white">
                     <h1>A Variety of cars</h1>
                 </div>
             </div>
             <div class="w3-display-container mySlides">
-                <img src="/images/carousel3.jpg" style="height:395px; width: 100%">
+                <img src="images/carousel3.jpg" style="height:395px; width: 100%">
                 <div class="w3-display-middle w3-padding-16" style:"color: white">
                     <h1>Stored at many locations</h1>
                 </div>
             </div>
             <div class="w3-display-container mySlides">
-                <img src="/images/c4.png" style="height:395px; width: 100%">
+                <img src="images/c4.png" style="height:395px; width: 100%">
                 <div class="w3-display-middle w3-padding-16" style:"color: white">
                     <h1>Travel the city</h1>
                 </div>
@@ -49,9 +49,9 @@
 
         <div class="front-content-info">
             <li>
-                <li class="front-content-text"><h3><img src="/images/dot.png" style:"display: inline">Drive all around Melbourne</h3></li>
-                <li class="front-content-text"><h3><img src="/images/dot.png" style:"display: inline">Multiple Cars</h3></li>
-                <li class="front-content-text"><h3><img src="/images/dot.png" style:"display: inline">Multiple Locations</h3></li>
+                <li class="front-content-text"><h3><img src="images/dot.png" style:"display: inline">Drive all around Melbourne</h3></li>
+                <li class="front-content-text"><h3><img src="images/dot.png" style:"display: inline">Multiple Cars</h3></li>
+                <li class="front-content-text"><h3><img src="images/dot.png" style:"display: inline">Multiple Locations</h3></li>
             </li>
         </div>
 

@@ -12,4 +12,8 @@ class CarBooking extends Model
     public function car_id() {
         return $this->belongsTo('App\Car');
     }
+
+    public function detail() {
+        return $this->hasOne('App\CarBookingDetails');
+    }
 }

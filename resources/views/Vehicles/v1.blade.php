@@ -9,7 +9,7 @@
 					<div class="product col-md-3 service-image-left">
                     
 						<center>
-							<img id="item-display" src="/images/Audi A1.jpg" alt=""></img>
+							<img id="item-display" src="images/Audi A1.jpg" alt=""></img>
 						</center>
 					</div>
 				</div>

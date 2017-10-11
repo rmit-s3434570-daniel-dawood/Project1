@@ -36,6 +36,8 @@ Route::get('vehicles', 'PagesController@vehicles');
 
 Route::get('locations', 'PagesController@locations');
 
+Route::get('home', 'HomeController@index');
+
 
 //Footer pages
 
