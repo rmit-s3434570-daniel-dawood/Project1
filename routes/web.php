@@ -57,6 +57,8 @@ Route::get('refund', function () {
     return view('refund');
 })->name('refund');
 
+Route::get('/home', 'HomeController@index');
+
 Route::get('booking/history', 'BookingController@history');
 
 Route::resource('car', 'CarController');
