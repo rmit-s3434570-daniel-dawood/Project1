@@ -54,3 +54,5 @@ Route::get('v1', 'VehiclesController@v1');
 Route::get('v2', 'VehiclesController@v2');
 Route::get('v3', 'VehiclesController@v3');
 Route::get('v4', 'VehiclesController@v4');
+Route::get('v5', 'VehiclesController@v5');
+Route::get('v6', 'VehiclesController@v6');
