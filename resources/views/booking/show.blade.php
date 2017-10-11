@@ -13,7 +13,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>User Details:</strong>
-            <p>Email: {{ $car_booking_id->email}}</p>
+            <p>Email: {{ $car_booking_id->$car_booking->email}}</p>
             <p>Name: {{ $car_booking_id->name}}</p>
             <p>Mobile: {{ $car_booking_id->mobile}}</p>
             <p>Address: {{ $car_booking_id->address}}</p>
