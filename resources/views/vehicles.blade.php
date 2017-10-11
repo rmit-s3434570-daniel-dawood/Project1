@@ -13,6 +13,7 @@
             <button class="btn btn-default filter-button" data-filter="Hyundai">Hyundai</button>
             <button class="btn btn-default filter-button" data-filter="Kia">Kia</button>
             <button class="btn btn-default filter-button" data-filter="Toyota">Toyota</button>
+            <button class="btn btn-default filter-button" data-filter="Suzuki">Suzuki</button>            
         </div>
         <br/>
 
@@ -42,12 +43,16 @@
                 </a>
             </div>
 
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter soon" >
-                <img src="http://www.oakleymotorsports.com/wp-content/uploads/2016/02/22520129_l.jpg" class="img-responsive">
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Toyota" >
+                <a href="v5">
+                <img src="/images/Toyota Corolla.jpg" class="img-responsive">
+                </a>
             </div>
             
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter soon">
-                <img src="http://www.oakleymotorsports.com/wp-content/uploads/2016/02/22520129_l.jpg" class="img-responsive">
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Suzuki">
+                <a href="v6">
+                <img src="/images/Suzuki Swift.jpg" class="img-responsive">
+                </a>
             </div>
     </div>
 </div>
