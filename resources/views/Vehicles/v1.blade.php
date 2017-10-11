@@ -21,9 +21,8 @@
 					<div class="product-price">$XXX Per Day</div>
 					<div class="product-stock">In Stock</div>
 					<div class="btn-group cart">
-						<button type="button" class="btn btn-success">
-							Book Now 
-						</button>
+					<button type="button" class="btn btn-success">
+                <a href="booking/create" >Book Now</a></button>
 					</div>					
 					<hr>
 				</div>
@@ -34,27 +33,35 @@
 					<ul id="myTab" class="nav nav-tabs nav_tabs">
 						
 						<li class="active"><a href="#service-one" data-toggle="tab">DESCRIPTION</a></li>
-						<li><a href="#service-two" data-toggle="tab">PRODUCT INFO</a></li>
-						<li><a href="#service-three" data-toggle="tab">REVIEWS</a></li>
+						<li><a href="#service-two" data-toggle="tab">FEATURES</a></li>
 						
 					</ul>
 				<div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade in active" id="service-one">
 						 
 							<section class="container product-info">
-								
+							<p>
+								Compact, sporty and a bit glamorous, 
+								the Audi A1 is a hot little car for getting around the city.
+							</p>	
 							</section>
 										  
 						</div>
 					<div class="tab-pane fade" id="service-two">
 						
 						<section class="container">
-								
+						<p>
+							<ol>
+								<li>Seats 4</li><br>
+								<li>5 star ANCAP safety rating</li><br>
+								<li>Dual airbags (driver/passenger)</li><br>
+								<li>ABS brakes and traction control</li><br>
+								<li>Cruise control</li><br>
+								<li>Turbo charged engine</li>
+							</ol>
+						</p>
 						</section>
 						
-					</div>
-					<div class="tab-pane fade" id="service-three">
-												
 					</div>
 				</div>
 				<hr>

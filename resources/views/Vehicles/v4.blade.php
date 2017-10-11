@@ -21,9 +21,8 @@
 					<div class="product-price">$XXX Per Day</div>
 					<div class="product-stock">In Stock</div>
 					<div class="btn-group cart">
-						<button type="button" class="btn btn-success">
-							Book Now 
-						</button>
+					<button type="button" class="btn btn-success">
+                <a href="booking/create" >Book Now</a></button>
 					</div>					
 					<hr>
 				</div>
@@ -35,26 +34,33 @@
 						
 						<li class="active"><a href="#service-one" data-toggle="tab">DESCRIPTION</a></li>
 						<li><a href="#service-two" data-toggle="tab">PRODUCT INFO</a></li>
-						<li><a href="#service-three" data-toggle="tab">REVIEWS</a></li>
 						
 					</ul>
 				<div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade in active" id="service-one">
 						 
 							<section class="container product-info">
-								
+							<p>
+							Our Yarises are your go-to for getting around the city, beaches, business meetings and shopping centre car parks.	
+							</p>	
 							</section>
 										  
 						</div>
 					<div class="tab-pane fade" id="service-two">
 						
 						<section class="container">
-								
+						<p>
+							<ol>
+								<li>Seats 5</li><br>
+								<li>6 SRS Airbags</li><br>
+								<li>ABS brakes</li><br>
+								<li>5 star ANCAP safety rating</li><br>
+								<li>Reverse camera</li><br>
+								<li>Touch screen audio system</li>
+							</ol>							
+						</p>		
 						</section>
 						
-					</div>
-					<div class="tab-pane fade" id="service-three">
-												
 					</div>
 				</div>
 				<hr>

@@ -57,11 +57,41 @@
 
 
         <div class="divider"></div>
+        <div>
+
+        <div class="col-sm-12" style="margin: 25px; background-image:url('/images/c4.png')">
+            <div class="panel" style="margin: 25px; background: transparent; color: white">
+                <h3>Book Vehicles near you, Any hour of the day</h3>
+                <br><button type="button" class="btn btn-warning">
+                <a href="booking/create" >Book Now</a></button></div>
+            </div>
+        </div>            
+        
+        <div class="col-sm-12" style="margin: 25px; background-image:url('/images/c4.png')">
+            <div class="panel" style="margin: 25px; background: transparent; color: white">
+                <h3>Wide Range of Cars, Get the right vehicle</h3>
+                <br><button type="button" class="btn btn-warning">
+                <a href="vehicles">View Vehicles</a></button></div>
+            </div>
+        </div>  
+        
+        <div class="col-sm-12" style="margin: 25px; background-image:url('/images/c4.png')">
+            <div class="panel" style="margin: 25px; background: transparent; color: white">
+                <h3>Fuel, cleaning, rego and servicing included</h3>
+                <br><button type="button" class="btn btn-warning">
+                <a href="auth/register" >Join Now</a></button></div>
+            </div>
+        </div>          
+            
+        </div>
+      
+        
+        <!--        
         
         <div class="container text-center">    
           <h3>What We Do</h3><br>
           <div class="row">
-            <div class="col-sm-4"  style:"background-image('/images/c4.png')">
+            <div class="col-sm-4">
                 <div class="panel" style="background: transparent; color: white;">
  <img src="/images/c4.png" class="img-responsive" style="width:100%" alt="Image">                    
                 <h3>Book Vehicles near you, Any hour of the day</h3>
@@ -86,7 +116,7 @@
           </div>
         </div><br>
         
-        <!--
+
         
         <div class="col-sm-3" style="margin: 25px">
             <div class="panel" style="margin: 25px; background: transparent; color: white">

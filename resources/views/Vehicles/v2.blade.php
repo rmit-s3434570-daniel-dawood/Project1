@@ -21,9 +21,8 @@
 					<div class="product-price">$XXX Per Day</div>
 					<div class="product-stock">In Stock</div>
 					<div class="btn-group cart">
-						<button type="button" class="btn btn-success">
-							Book Now 
-						</button>
+					<button type="button" class="btn btn-success">
+                <a href="booking/create" >Book Now</a></button>
 					</div>					
 					<hr>
 				</div>
@@ -35,26 +34,33 @@
 						
 						<li class="active"><a href="#service-one" data-toggle="tab">DESCRIPTION</a></li>
 						<li><a href="#service-two" data-toggle="tab">PRODUCT INFO</a></li>
-						<li><a href="#service-three" data-toggle="tab">REVIEWS</a></li>
 						
 					</ul>
 				<div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade in active" id="service-one">
 						 
 							<section class="container product-info">
-								
+							<p>
+								With stacks of storage space, while still being small enough for city parking, 
+							there’s nothing the i30 Wagon can’t do! Except drive underwater. Trust us.</p>	
 							</section>
 										  
 						</div>
 					<div class="tab-pane fade" id="service-two">
 						
 						<section class="container">
-								
+						<p>
+							<ol>
+								<li>Seats 5</li><br>
+								<li>5 star ANCAP safety rating</li><br>
+								<li>Dual airbags (driver/passenger)</li><br>
+								<li>ABS brakes and traction control</li><br>
+								<li>Low exhaust pollutant emissions</li><br>
+								<li>Usable cargo area – rear seats fold flat</li>
+							</ol>							
+						</p>		
 						</section>
 						
-					</div>
-					<div class="tab-pane fade" id="service-three">
-												
 					</div>
 				</div>
 				<hr>
