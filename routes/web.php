@@ -10,54 +10,7 @@
 |
 */
 
-Route::get('booking/create', 'BookingController@view');
-
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
 Auth::routes();
-
-Route::get('contact', function () {
-    return view('contact');
-})->name('contact');
-
-Route::get('vehicles', function () {
-    return view('vehicles');
-})->name('vehicles');
-
-Route::get('about', function () {
-    return view('about');
-})->name('about');
-
-Route::get('thankyou', function () {
- return view('booking.thankyou');
-})->name('thankyou');
-
-Route::get('create', function () {
- return view('booking.create');
-})->name('booking');
-
-Route::get('locations', function () {
-    return view('locations');
-})->name('locations');
-
-Route::get('faq', function () {
-    return view('faq');
-})->name('faq');
-
-Route::get('terms', function () {
-    return view('terms');
-})->name('terms');
-
-Route::get('privacy', function () {
-    return view('privacy');
-})->name('privacy');
-
-Route::get('refund', function () {
-    return view('refund');
-})->name('refund');
-
-Route::get('/home', 'HomeController@index');
 
 Route::get('booking/history', 'BookingController@history');
 
@@ -66,3 +19,38 @@ Route::resource('car', 'CarController');
 Route::resource('booking', 'BookingController'); 
 
 Route::post('booking/{id}', 'BookingController@update');
+
+
+
+//Main Pages
+
+Route::get('/', 'PagesController@welcome');
+
+Route::get('welcome', 'PagesController@welcome');
+
+Route::get('about', 'PagesController@about');
+
+Route::get('contact', 'PagesController@contact');
+
+Route::get('vehicles', 'PagesController@vehicles');
+
+Route::get('locations', 'PagesController@locations');
+
+
+//Footer pages
+
+Route::get('faq', 'PagesController@faq');
+Route::get('privacy', 'PagesController@privacy');
+Route::get('terms', 'PagesController@terms');
+Route::get('refund', 'PagesController@refund');
+
+
+//Other Pages
+Route::get('create', 'BookingController@create');
+
+
+//Vehicles Pages
+Route::get('v1', 'VehiclesController@v1');
+Route::get('v2', 'VehiclesController@v2');
+Route::get('v3', 'VehiclesController@v3');
+Route::get('v4', 'VehiclesController@v4');
