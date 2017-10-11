@@ -1,28 +1,86 @@
 @extends('layouts.master')
 @section('title', 'Home')
 @section('content')
+
+<div class="container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>      
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="/images/c4.png" alt="Tutrtle" style="width:100%; Height:395px">
+        <div class="carousel-caption">
+          <h3>Travel the city</h3>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="/images/carousel1.jpg" alt="Family" style="width:100%; Height:395px">
+        <div class="carousel-caption">
+          <h3>Travel with the family</h3>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="/images/carousel2.jpg" alt="Cars" style="width:100%; Height:395px">
+        <div class="carousel-caption">
+          <h3>A Variety of cars</h3>
+        </div>
+      </div>
+      
+      <div class="item">
+        <img src="/images/carousel3.jpg" alt="Location" style="width:100%; Height:395px">
+        <div class="carousel-caption">
+          <h3>Stored at many locations</h3>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+    <!-- OLD Carousel
         <div class="container" id="map">
             <div class="w3-display-container mySlides">
                 <img src="/images/carousel1.jpg" style="height:395px; width: 100%">
-                <div class="w3-display-middle w3-padding-16" style:"color: white">
+                <div class="w3-display-middle w3-padding-16">
                     <h1>Travel with the family</h1>
                 </div>
             </div>
             <div class="w3-display-container mySlides">
                 <img src="/images/carousel2.jpg" style="height:395px; width: 100%">
-                <div class="w3-display-middle w3-padding-16" style:"color: white">
+                <div class="w3-display-middle w3-padding-16" >
                     <h1>A Variety of cars</h1>
                 </div>
             </div>
             <div class="w3-display-container mySlides">
                 <img src="/images/carousel3.jpg" style="height:395px; width: 100%">
-                <div class="w3-display-middle w3-padding-16" style:"color: white">
+                <div class="w3-display-middle w3-padding-16">
                     <h1>Stored at many locations</h1>
                 </div>
             </div>
             <div class="w3-display-container mySlides">
                 <img src="/images/c4.png" style="height:395px; width: 100%">
-                <div class="w3-display-middle w3-padding-16" style:"color: white">
+                <div class="w3-display-middle w3-padding-16">
                     <h1>Travel the city</h1>
                 </div>
             </div>
@@ -45,8 +103,13 @@
                 setTimeout(carousel, 5000); // Change image every 2 seconds
         }
         </script>
+        
+        
+        -->
 
-
+    
+    <br>
+    
         <div class="front-content-info">
             <li>
                 <li class="front-content-text"><h3><img src="/images/dot.png" style:"display: inline">Drive all around Melbourne</h3></li>
