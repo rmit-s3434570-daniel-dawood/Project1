@@ -21,4 +21,13 @@ class VehiclesController extends Controller
     public function v4(){
         return view('Vehicles.v4');
     }
+    
+     public function v5(){
+        return view('Vehicles.v5');
+    }
+    
+    public function v6(){
+        return view('Vehicles.v6');
+    }    
+    
 }
