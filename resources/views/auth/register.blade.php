@@ -1,11 +1,14 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('content')
+
+<link rel="stylesheet" href="{{ ('css/main.css') }}">
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
+            <div>
+                <div class="panel-heading" style="font-weight: 700; background-color: #f9ea43">Register</div>
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
