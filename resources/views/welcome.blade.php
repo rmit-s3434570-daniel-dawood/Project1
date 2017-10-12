@@ -2,6 +2,8 @@
 @section('title', 'Home')
 @section('content')
 
+<link rel="stylesheet" href="{{ ('css/main.css') }}">
+
 <div class="container">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
