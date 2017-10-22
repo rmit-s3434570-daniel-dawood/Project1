@@ -56,12 +56,12 @@ class BookingController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required|email',
-            'address' => 'required',
-            'mobile' => 'required',
-            'start_date' => 'required',
-            'end_date' => 'required',
+            'name' => 'required|min:2|regex:/^[A-Za-z\s-_]+$/',
+            'email' => 'required|string|email|max:255|exists:users',
+            'address' => 'required|string|max:50',
+            'mobile' => 'required|digits:12',
+            'start_date' => 'required|date',
+            'end_date' => 'required|date|after:start_date',
             'transaction_id' => 'required',
         ]);
 

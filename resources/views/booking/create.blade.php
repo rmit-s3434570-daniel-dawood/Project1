@@ -1,6 +1,9 @@
 @extends('layouts.master')
 @section('title', 'Add a Booking')
 @section('content')
+
+<link rel="stylesheet" href="{{ ('css/main.css') }}">
+
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
@@ -8,6 +11,9 @@
         </div>
     </div>
 </div>
+
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        
 @if (count($errors) > 0)
 <div class="alert alert-danger">
     <strong>Whoops!</strong> There were some problems with your input.<br><br>

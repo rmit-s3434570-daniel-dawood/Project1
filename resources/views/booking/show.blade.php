@@ -16,7 +16,7 @@
             <p>Email: {{ $car_booking_id->car_booking->email}}</p>
             <p>Name: {{ $car_booking_id->car_booking->name}}</p>
             <p>Mobile: {{ $car_booking_id->mobile}}</p>
-            <p>Address: {{ $car_booking_id->address_line_1}}</p>
+            <p>Address: {{ $car_booking_id->address}}</p>
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">

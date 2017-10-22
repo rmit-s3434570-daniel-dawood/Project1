@@ -20,6 +20,10 @@ Route::resource('booking', 'BookingController');
 
 Route::post('booking/{id}', 'BookingController@update');
 
+//Route::get('thankyou', function () {
+// return view('booking.thankyou');
+//})->name('thankyou');
+
 
 
 //Main Pages
@@ -48,7 +52,7 @@ Route::get('refund', 'PagesController@refund');
 
 
 //Other Pages
-Route::get('create', 'BookingController@create');
+//Route::get('create', 'BookingController@create');
 
 
 //Vehicles Pages

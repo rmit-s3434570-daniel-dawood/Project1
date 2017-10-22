@@ -99,10 +99,13 @@ return [
     |
     */
 
-    'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'custom' => [
+        'password' => [
+            'regex' => 'Password must contain at least one number, both uppercase and lowercase letters and one special character(Eg: !, $, # etc.)',
         ],
+        'name' => [
+            'regex' => 'Name must be a minimum of 2 characters and cannot contain numbers.',
+    ],
     ],
 
     /*
