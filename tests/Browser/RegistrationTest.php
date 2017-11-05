@@ -17,20 +17,26 @@ class RegistrationTest extends DuskTestCase
     {
         $this->browse(function ($browser) {
             $browser->visit('ducky/public/register')
-                ->type('name', 'me')
-                ->type('email', 'test@outlook.com')
+                ->type('name', 'DuckyTester')
+                ->type('email', 'duckytest@gmail.com')
                 ->type('password', 'secret')
                 ->type('password_confirmation', 'secret')
-                ->press('Register')
+                ->press('Register');
                 //->see('register')
                 //->seeInDatabase('users', ['email' => 'someone@outlook.com']);
         });
     }
 
-    $this->assertDatabaseHas('users', [
-        'email' => 'sally@example.com'
-    ]);
+    public function test_account_is_in_database()
+    {
+      $this->assertDatabaseHas('users', [
+          'email' => 'duckytest@gmail.com'
+      ]);
+    }
+
+    // $this->assertDatabaseHas('users', [
+    //     'email' => 'sally@example.com'
+    // ]);
 
 
 }
-

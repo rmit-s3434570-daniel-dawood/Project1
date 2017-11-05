@@ -13,16 +13,27 @@ class LinksTesting extends DuskTestCase
      *
      * @return void
      */
-    public function testCreateCarLink()
+
+    public function test_i_can_access_create_car_link()
     {
+
+      $this->browse(function ($browser) {
+        $browser->visit('ducky/public/login')
+               ->type('email', 'coconutboy@gmail.com')
+                  ->type('password', 'coconut')
+                  ->press('Login')
+                  ->assertPathIs('/ducky/public/home');
+      });
+
         $this->browse(function (Browser $browser) {
             $browser->visit('ducky/public/car/create')
                    ->assertSee('Add New Car');
         });
     }
 
-    public function testBookingLink()
+    public function test_i_can_access_booking_link()
     {
+
         $this->browse(function (Browser $browser) {
             $browser->visit('ducky/public/booking/create')
                    ->assertSee('Book a Ducky');

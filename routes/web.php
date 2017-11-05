@@ -16,7 +16,7 @@ Route::get('booking/history', 'BookingController@history');
 
 Route::resource('car', 'CarController');
 
-Route::resource('booking', 'BookingController'); 
+Route::resource('booking', 'BookingController');
 
 Route::post('booking/{id}', 'BookingController@update');
 
@@ -38,6 +38,9 @@ Route::get('locations', 'PagesController@locations');
 
 Route::get('home', 'HomeController@index');
 
+Route::get('thankyou', function () {
+ return view('booking.thankyou');
+})->name('thankyou');
 
 //Footer pages
 

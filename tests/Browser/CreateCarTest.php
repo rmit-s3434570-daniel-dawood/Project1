@@ -13,7 +13,7 @@ class CreateCarTest extends DuskTestCase
      *
      * @return void
      */
-    public function testCreateCar()
+    public function test_i_can_create_car()
     {
         $this->browse(function ($browser) {
             $browser->visit('ducky/public/car/create')
@@ -23,5 +23,12 @@ class CreateCarTest extends DuskTestCase
                 ->press('.submit')
                 ->assertSee('Car added successfully');
         });
+    }
+
+    public function test_car_is_created_in_database()
+    {
+      $this->assertDatabaseHas('cars', [
+          'name' => 'TestCar'
+      ]);
     }
 }

@@ -38,7 +38,7 @@
     <div class="form-group">
     {!! Form::label('start_date', 'Booking Start Date') !!}
     {!! Form::input('date', 'start_date', null, ['class' => 'form-control'], ['id' => 'start_date']) !!}
-   <div class="form-group" id="end_date">
+   <div class="form-group">
     {!! Form::label('end_date', 'Booking End Date') !!}
     {!! Form::input('date', 'end_date', null, ['class' => 'form-control'], ['id' => 'end_date']) !!}
     </div>
@@ -65,7 +65,7 @@
     {!! Form::text('address', '', ['class' => 'form-control']) !!}
 </div>
 
-<button class="btn btn-success" type="submit">Book Now!</button>
+<button class="submit btn btn-success" type="submit">Book a Ducky!</button>
 
 {!! Form::close() !!}
 @endsection
